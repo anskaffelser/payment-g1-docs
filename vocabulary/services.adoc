@@ -6,11 +6,21 @@
 _Norwegian: Aksesspunkt_
 
 
+== Central Coordinating Register for Legal Entities [[service-enhetsregisteret]]
+
+_Norwegian: Enhetsregisteret_
+
+The Norwegian national register of legal entities. Each entity is identified by a unique identifier containing 9 numbers.
+
+
 == Elektronisk mottaker- og adresseregister (ELMA) [[service-elma]]
 
 _English: Electronic receiver address register_
 
 Used in conjunction with capability lookup OpenPEPPOL. This is the Norwegian version of link:#tech-smp[SMP].
+
+Links:
+link::https://vefa.difi.no/peppol/tools/elma-production/[VEFA]
 
 
 == Public key Services

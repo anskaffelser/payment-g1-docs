@@ -7,11 +7,13 @@ Protocol used in PEPPOL eDelivery Network
 
 The basic communication protocol used in the PEPPOL eDelivery network.
 
-RFC4130
+Links:
+link::https://www.ietf.org/rfc/rfc4130.txt[RFC4130]
 
 
 == Associated Signature Container (ASiC) [[tech-asic]]
 
+Links:
 link::https://vefa.difi.no/bb/standard/asic/[VEFA]
 
 
@@ -19,13 +21,27 @@ link::https://vefa.difi.no/bb/standard/asic/[VEFA]
 
 _Norwegian: Virksomhetssertifikat_
 
+Norwegian "standard" describing requirements for issuing of Norwegian business certificates used as signature on behalf of Norwegian organizations registeret in link:#service-enhetsregisteret[Central Coordinating Register for Legal Entities].
+
+Business certificates are instances of link:#tech-x509[X.509] certificates.
+
+Links:
+link::https://www.regjeringen.no/no/dokumenter/kravspesifikasjon-for-pki-i-offentlig-se/id611085/[Description (Norwegian only)]
+
 
 == ISO 20022 [[tech-iso2002]]
 
-An ISO standard for electronic data interchange between financial institutions.
+The ISO standard for electronic data interchange between financial institutions.
+
+Links:
+link::https://www.iso20022.org/[Homepage]
+link::https://vefa.difi.no/iso20022/[VEFA]
 
 
 == Message Disposition Notification (MDN) [[tech-mdn]]
+
+Links:
+link::https://www.ietf.org/rfc/rfc3798.txt[RFC3798]
 
 
 == Registered Electronic Mail (REM) [[tech-rem]]
@@ -34,10 +50,20 @@ Old standard provided by link:#org-etsi[ETSI] to gimmich physical postal service
 
 The REM receipt is used to provide transport agnostic link:#concept-receipt[receipts] in link:#role-c2[sending access point] and link:#role-c3[receiving access point]. The receipt is created and signed by the acces points, and contains the link:#tech-mdn[MDN] sent by the receiving access point. This receipt is used as link:#concept-rc3[RC3].
 
+Links:
 link::https://vefa.difi.no/bb/standard/rem/[VEFA]
 
 
+== Secure Hash Algorithm 1 (SHA-1) [[tech-sha1]]
+
+Links:
+link::https://en.wikipedia.org/wiki/SHA-1[Wikipedia]
+
+
 == Secure Hash Algorithm 2 (SHA-2) [[tech-sha2]]
+
+Links:
+link::https://en.wikipedia.org/wiki/SHA-2[Wikipedia]
 
 
 === SHA-256 [[tech-sha256]]
@@ -50,6 +76,7 @@ link::https://vefa.difi.no/bb/standard/rem/[VEFA]
 
 A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
 
+Links:
 link::https://vefa.difi.no/peppol/standard/service-metadata-locator/[VEFA]
 
 
@@ -57,11 +84,16 @@ link::https://vefa.difi.no/peppol/standard/service-metadata-locator/[VEFA]
 
 A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
 
+Links:
 link::https://vefa.difi.no/peppol/standard/service-metadata-provider/[VEFA]
+
+
+== Standard Business Document (SBD) [[tech-sbd]]
 
 
 == Standard Business Document Header (SBDH) [[tech-sbdh]]
 
+Links:
 link::https://vefa.difi.no/bb/standard/sbdh/[VEFA]
 
 

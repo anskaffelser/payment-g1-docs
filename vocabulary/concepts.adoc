@@ -6,6 +6,14 @@
 The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
 
 
+== Certificate Authority (CA) [[concept-ca]]
+
+_Norwegian: Tillitsanker_
+
+
+== Document Type Identifier [[concept-documenttypeid]]
+
+
 == File exchange [[concept-file-exchange]]
 
 The physical data-file moving “on the wire”.
@@ -15,15 +23,45 @@ The physical data-file moving “on the wire”.
 
 _Norwegian: Firehjørnersmodellen_
 
+image::images\4cm.png[]
 
 == Enhanced PEPPOL eDelivery Network [[concept-enhanced-peppol]]
 
 This is an evolution of the standard PEPPOL eDelivery Network that has strengthened secutity requirements.
 
+== PEPPOL Network [[concept-peppol-network]]
+
+_Norwegian: PEPPOL-nettverket_
+
+Referencing the virtual network containing link:#service-ap[access points], link:#teck-smp[SMPs] and link:#tech-sml[SML] authenticated with the link:#role-peppol-pki[PEPPOL PKI].
+
 
 == PEPPOL Membership [[concept-peppol-membership]]
 
 _Norwegian: PEPPOL-medlemsskap_
+
+Links:
+link:http://www.peppol.eu/about_peppol/copy_of_how-to-join[Membership information]
+
+
+== PEPPOL Participant [[concept-peppl-participant]]
+
+
+== PEPPOL PKI [[role-peppol-pki]]
+
+This is the link:#concept-pki[PKI] used to authenticate link:#service-ap[access points], link:#tech-smp[SMPs] and link:#tech-sml[SML] part of link:#concept-peppol-network[PEPPOL Network].
+
+link:#org-openpeppol[OpenPEPPOL] has contracted a link:#concept-ca[certificate authority] to provide certificates part of PEPPOL PKI.
+
+
+== Process [[concept-process]]
+
+
+== Public Key Infrastructure (PKI) [[concept-pki]]
+
+Links:
+link:https://en.wikipedia.org/wiki/Public_key_infrastructure[Wikipedia]
+
 
 
 == Receipt [[concept-receipt]]
@@ -33,8 +71,14 @@ _Norwegian: Kvittering_
 
 === Receipt from C2 (RC2) [[concept-rc2]]
 
+_Norwegian: Kvittering fra hjørne 2_
+
 
 === Receipt from C3 (RC3) [[concept-rc3]]
 
+_Norwegian: Kvittering fra hjørne 3_
+
 
 === Receipt from C4 (RC4) [[concept-rc4]]
+
+_Norwegian: Kvittering fra hjørne 3_

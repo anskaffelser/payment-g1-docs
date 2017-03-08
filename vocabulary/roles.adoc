@@ -8,21 +8,21 @@ _Norwegian: PEPPOL-myndighet_
 Responsible for OpenPEPPOL in their geographical area. Is responsible for approving and monitoring Access Points.
 
 
-== Receiver [[role-c4]]
+== Receiver (C4) [[role-c4]]
 
 _Norwegian: Mottaker_
 
 
-== Receiving Access Point [[role-c3]]
+== Receiving Access Point (C3) [[role-c3]]
 
 _Norwegian: Mottakers aksesspunkt_
 
 
-== Sender [[role-c1]]
+== Sender (C1) [[role-c1]]
 
 _Norwegian: Sender_
 
 
-== Sending Access Point [[role-c2]]
+== Sending Access Point (C2) [[role-c2]]
 
 _Norwegian: Senders aksesspunkt_

@@ -1,14 +1,29 @@
 = Organizations [[org]]
 
 
-== Connecting European Facility (CEF) [[org-cef]]
+== Connecting Europe Facility (CEF) [[org-cef]]
+
+Links:
+link:https://ec.europa.eu/inea/en/connecting-europe-facility[Homepage]
 
 
 == European Telecommunications Standards Institute (ETSI) [[org-etsi]]
+
+Links:
+link::http://www.etsi.org/[Homepage]
 
 
 == OpenPEPPOL AISBL [[org-openpeppol]]
 
 Operationalization of the original PEPPOL (Pan-European Public Procurement Online) pilot project funded by European Commision in the period 2008-2012. OpenPEPPOL is today a non-profit international association under Belgian law (AISBL),
 
-* link:http://peppol.eu/[Homepage]
+Links:
+link:http://peppol.eu/[Homepage]
+
+
+== The Brønnøysund Register Centre (Brreg) [[org-brreg]]
+
+_Norwegian: Brønnøysundregistrene_
+
+Links:
+link:http://brreg.no/[Homepage]
