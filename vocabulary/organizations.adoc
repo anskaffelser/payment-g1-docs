@@ -1,0 +1,14 @@
+= Organizations [[org]]
+
+
+== Connecting European Facility (CEF) [[org-cef]]
+
+
+== European Telecommunications Standards Institute (ETSI) [[org-etsi]]
+
+
+== OpenPEPPOL AISBL [[org-openpeppol]]
+
+Operationalization of the original PEPPOL (Pan-European Public Procurement Online) pilot project funded by European Commision in the period 2008-2012. OpenPEPPOL is today a non-profit international association under Belgian law (AISBL),
+
+* link:http://peppol.eu/[Homepage]

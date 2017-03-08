@@ -1,0 +1,40 @@
+= Concepts [[concept]]
+
+
+== Business transaction [[concept-business-transaction]]
+
+The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
+
+
+== File exchange [[concept-file-exchange]]
+
+The physical data-file moving “on the wire”.
+
+
+== Four Corner Model (4CM) [[concept-4cm]]
+
+_Norwegian: Firehjørnersmodellen_
+
+
+== Enhanced PEPPOL eDelivery Network [[concept-enhanced-peppol]]
+
+This is an evolution of the standard PEPPOL eDelivery Network that has strengthened secutity requirements.
+
+
+== PEPPOL Membership [[concept-peppol-membership]]
+
+_Norwegian: PEPPOL-medlemsskap_
+
+
+== Receipt [[concept-receipt]]
+
+_Norwegian: Kvittering_
+
+
+=== Receipt from C2 (RC2) [[concept-rc2]]
+
+
+=== Receipt from C3 (RC3) [[concept-rc3]]
+
+
+=== Receipt from C4 (RC4) [[concept-rc4]]

@@ -1,0 +1,73 @@
+= Technical standards [[tech]]
+
+
+== Applicability Statement 2 (AS2) [[tech-as2]]
+
+Protocol used in PEPPOL eDelivery Network
+
+The basic communication protocol used in the PEPPOL eDelivery network.
+
+RFC4130
+
+
+== Associated Signature Container (ASiC) [[tech-asic]]
+
+link::https://vefa.difi.no/bb/standard/asic/[VEFA]
+
+
+== Business Certificate [[tech-business-certificate]]
+
+_Norwegian: Virksomhetssertifikat_
+
+
+== ISO 20022 [[tech-iso2002]]
+
+An ISO standard for electronic data interchange between financial institutions.
+
+
+== Message Disposition Notification (MDN) [[tech-mdn]]
+
+
+== Registered Electronic Mail (REM) [[tech-rem]]
+
+Old standard provided by link:#org-etsi[ETSI] to gimmich physical postal services electronically. This project uses a slightly modified version of the receipt provided in REM.
+
+The REM receipt is used to provide transport agnostic link:#concept-receipt[receipts] in link:#role-c2[sending access point] and link:#role-c3[receiving access point]. The receipt is created and signed by the acces points, and contains the link:#tech-mdn[MDN] sent by the receiving access point. This receipt is used as link:#concept-rc3[RC3].
+
+link::https://vefa.difi.no/bb/standard/rem/[VEFA]
+
+
+== Secure Hash Algorithm 2 (SHA-2) [[tech-sha2]]
+
+
+=== SHA-256 [[tech-sha256]]
+
+
+=== SHA 512 [[tech-sha512]]
+
+
+== Service Metadata Locator (SML) [[tech-sml]]
+
+A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
+
+link::https://vefa.difi.no/peppol/standard/service-metadata-locator/[VEFA]
+
+
+== Service Metadata Publisher (SMP) [[tech-smp]]
+
+A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
+
+link::https://vefa.difi.no/peppol/standard/service-metadata-provider/[VEFA]
+
+
+== Standard Business Document Header (SBDH) [[tech-sbdh]]
+
+link::https://vefa.difi.no/bb/standard/sbdh/[VEFA]
+
+
+== Transport Layer Security (TLS) [[tech-tls]]
+
+Used in combination with HTTP
+
+
+== X.509 [[tech-x509]]

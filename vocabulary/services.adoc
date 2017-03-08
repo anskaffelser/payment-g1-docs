@@ -1,0 +1,18 @@
+= Services [[service]]
+
+
+== Access Point (AP) [[service-ap]]
+
+_Norwegian: Aksesspunkt_
+
+
+== Elektronisk mottaker- og adresseregister (ELMA) [[service-elma]]
+
+_English: Electronic receiver address register_
+
+Used in conjunction with capability lookup OpenPEPPOL. This is the Norwegian version of link:#tech-smp[SMP].
+
+
+== Public key Services
+
+Distributor of public keys for encryption of payload to a receiver
