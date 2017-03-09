@@ -29,19 +29,19 @@ image::images\4cm.png[]
 
 This is an evolution of the standard PEPPOL eDelivery Network that has strengthened secutity requirements.
 
-== PEPPOL Network [[concept-peppol-network]]
-
-_Norwegian: PEPPOL-nettverket_
-
-Referencing the virtual network containing link:#service-ap[access points], link:#teck-smp[SMPs] and link:#tech-sml[SML] authenticated with the link:#role-peppol-pki[PEPPOL PKI].
-
-
 == PEPPOL Membership [[concept-peppol-membership]]
 
 _Norwegian: PEPPOL-medlemsskap_
 
 Links:
 link:http://www.peppol.eu/about_peppol/copy_of_how-to-join[Membership information]
+
+
+== PEPPOL Network [[concept-peppol-network]]
+
+_Norwegian: PEPPOL-nettverket_
+
+Referencing the virtual network containing link:#service-ap[access points], link:#teck-smp[SMPs] and link:#tech-sml[SML] authenticated with the link:#role-peppol-pki[PEPPOL PKI].
 
 
 == PEPPOL Participant [[concept-peppl-participant]]

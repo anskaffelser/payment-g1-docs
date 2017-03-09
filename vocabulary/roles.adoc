@@ -1,6 +1,9 @@
 = Roles [[role]]
 
 
+== Bank [[role-bank]]
+
+
 == PEPPOL Authority (PA) [[role-pa]]
 
 _Norwegian: PEPPOL-myndighet_
