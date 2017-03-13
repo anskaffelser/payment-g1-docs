@@ -1,0 +1,142 @@
+= Requirements to Acess Point in financial network
+Agency of Public Management and eGovernment (Difi)
+v1.0
+:description: Service level requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network.
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 1
+:source-highlighter: coderay
+:sectanchors:
+:sectnums:
+
+{description}
+
+:leveloffset: +1
+
+= Scope for this document
+
+This document identifies the services and the minimum service level required for a PEPPOL Access Point (PEPPOL AP) offering services in the Enhanced PEPPOL eDelivery network.
+
+This document also identifies the security elements applied in the Enhanced PEPPOL eDelivery network that are in addition to those that are used in the baseline PEPPOL eDelivery Network.
+
+The stated services and service levels are considered a minimum level and a provider of a PEPPOL AP services (a PEPPOL AP provider) may offer higher level of services as well as additional services as part of its offerings to the market.
+
+Since OpenPEPPOL do not have an agreement with end-users, this document also set requirements that the PEPPOL AP provider shall include in their contract with the PEPPOL Participants they are servicing.
+
+= Organisational and contractual requirements
+
+.	The PEPPOL AP provider shall have a valid membership in OpenPEPPOL.
+
+.	The PEPPOL AP provider shall have a signed agreement with a PEPPOL Authority that have governance for the Enhanced PEPPOL eDelivery Network.
+
+.	The PEPPOL AP shall be verified and certified as conformant to the specifications of the Enhanced PEPPOL eDelivery network by the PEPPOL Authority with whom the service provider has an agreement before they will be enrolled with a production certificate.
+
+.	The PEPPOL AP provider shall attend the technical forums and training programs organised by the PEPPOL Authority with whom they have an agreement.
+
+.	The PEPPOL AP provider shall have a signed contract with the PEPPOL Participants they are servicing. This contract shall include provisions related to the PEPPOL Participant responsibility for ensuring that:
+.. the PEPPOL Business Document has been validated without errors before sending the business document/payload into the infrastructure;
+.. the Public key service is used to store and extract certificate used for encrypting the PEPPOL Business Document/payload;
+.. the ASiC-E container is used for packaging the PEPPOL Business Document;
+.. the SBDH is used and properly reflects the metadata of the PEPPOL Business Document(s) carried in the ASIC-E container.
+.. acknowledgements and receipts are generated and sent to confirm receipt of PEPPOL Business Documents/payloads.
+
+= Services provided by PEPPOL AP providers
+
+. PEPPOL AP providers shall provide services related to the daily operation and use of the Enhanced PEPPOL eDelivery network. Such services shall include:
+.. Daily operation of PEPPOL AP services giving PEPPOL Participants access to the Enhanced PEPPOL eDelivery network;
+.. Providing support to all PEPPOL Participants using its services as outlined in section 13 below;
+.. Logging the sending and receiving of PEPPOL Business Documents/payloads for support and traceability purposes;
+.. Engaging with other PEPPOL AP Providers and PEPPOL SMP Providers to resolve issues related to transfer of PEPPOL Business Documents/payloads;
+.. Reporting of service level compliance and significant operational disruptions to the PEPPOL Authority with whom they have a contract as outlined in section 14 below;
+.. Escalating support issues that the service provider cannot resolve, to the PEPPOL Authority with whom they have signed an Agreement. The service provider can escalate issues to the PEPPOL Coordinating Authority if the issue cannot be resolved with the PEPPOL Authority;
+.. Performing the necessary testing required to ensure compliance with the relevant technical standards and specifications defined by PEPPOL.
+
+= Provision of PEPPOL services
+
+. PEPPOL AP providers shall provide and maintain its services in a reliable and professional manner and in compliance with all applicable laws and regulations.
+. PEPPOL AP providers shall use professionals who understand the applicable technology and who will exercise reasonable care in providing the services.
+. PEPPOL AP providers shall establish and maintain the following environments:
+.. A production environment in which the production certificate from OpenPEPPOL shall be used;
+.. A disaster and recovery environment in which the production certificate from OpenPEPPOL shall be used;
+.. A customer test environment in which the test certificate from OpenPEPPOL shall be used;
+.. A development environment in which the test certificate from OpenPEPPOL shall be used.
+
+= Response time and availability
+
+. PEPPOL AP services shall be available 99.5%, Monday through Sunday (24/7).
+. The PEPPOL AP service is considered unavailable if it is not reachable for a continuous 60 seconds or for other reasons is not able to handle incoming messages in a secure manner.
+. Availability shall be measured as a monthly average including announced service windows.
+. Service windows shall be scheduled outside of business hours and shall not exceed 2 hours. Service windows shall be announced at minimum 3 days in advance to the mailing list provided by the PEPPOL Coordinating Authority.
+. PEPPOL AP services shall be configure with a timeout of no less than 60 seconds.
+. A sending PEPPOL AP shall try to deliver a PEPPOL Business Document/payload at least 3 times within a period of 2 hours. In cases where delivery of a PEPPOL Business Document/payload fails, the PEPPOL AP provider shall inform the sending PEPPOL Participant on the non-delivery.
+
+= Capacity and scalability
+
+. PEPPOL AP services shall be able handle PEPPOL Business Documents/payload up to 2 GB.
+. PEPPOL AP providers shall establish their systems with sufficient capacity to serve PEPPOL Participants and other PEPPOL AP providers within the required service levels.
+. PEPPOL AP providers shall have a documented capacity planning process that ensures sufficient system capacity based on statistics of work load, availability and response time.
+. PEPPOL AP providers shall ensure that they have sufficient resources for the readiness, testing, operation and maintenance of their own services, including applicable connections to and from other service providers and PEPPOL Participants.
+. If response time or availability requirements cannot be met due to insufficient capacity, providers of PEPPOL AP services shall scale their systems to a level appropriate for handling the workload.
+
+= Authentication
+
+. PEPPOL AP providers must limit their service to communicate only with other PEPPOL AP providers within the same domain. In the case of service being used to multiple domains must appropriate measures be in place.
+. PEPPOL AP providers must use the authoritative list of verified PEPPOL AP providers when authenticating sending and receiving of documents.
+. PEPPOL Authority provides the authoritative list of verified PEPPOL AP providers to be used. PEPPOL AP providers must update their list by Wednesday as 12pm CET/CEST. List is in freeze as of Friday 12pm CET/CEST the week before.
+. PEPPOL AP providers must not update the list within freeze periods (summer and Christmas) as communicated upfront by PEPPOL Authority.
+. PEPPOL AP providers must establish routines to update and communicate the PEPPOL certificate aligned according to availability of updated authoritative list.
+
+= Registration of PEPPOL Participants receive capabilities
+
+. PEPPOL AP providers shall register and maintain receive capabilities for the PEPPOL Participants it services in a PEPPOL SMP.
+. PEPPOL AP providers shall verify the identity of the PEPPOL Participant before doing a registration in a PEPPOL SMP.
+. PEPPOL AP providers shall ensure that the receiving PEPPOL Participant has registered their certificate to be used for encryption is available in the Certificate service.
+
+= Service disruption
+
+. PEPPOL AP providers shall have an escalation procedure and a contingency plan to handle service disruption.
+. PEPPOL AP providers shall log service downtime and document availability in monthly reports as outlined in section 14.
+. Major incidents, such as breaches in the security, which could have an impact on other service providers shall be communicated within 2 hours to mailing list provided by the PEPPOL Authority.
+
+= Logging
+
+. PEPPOL AP providers shall log all PEPPOL Business Documents/payloads that they send or receive. Such logs shall be kept for the period prescribed by law, but no less than 3 months.
+. PEPPOL AP providers shall on request from the implicated users (PEPPOL SML, PEPPOL SMP, other PEPPOL APs and/or PEPPOL Participant) or from the PEPPOL Authority reveal or give access to relevant data from the logs provided that the data is not subject to a duty of confidentiality in which case the prior written consent of the data subject should be retrieved.
+. PEPPOL AP providers shall generate and store REM evidence for twelve months.
+. PEPPOL AP providers shall make the REM evidence available to the PEPPOL Participant on request.
+
+= Handling of acknowledgements and receipts
+
+. A receiving PEPPOL AP shall send a technical receipt at communication protocol level (e.g. an MDN) to the sending PEPPOL AP within 2 seconds after having received the PEPPOL Business Document/payload.
+. A sending PEPPOL AP shall be able to receive, process and store a technical receipt at communication protocol level (e.g. an MDN), including correlating it to the sent PEPPOL Business Document/Payload.
+. In case an acknowledgment of receipt is not received within 30 minutes after sending the PEPPOL Business Document/payload, the sending PEPPOL AP shall initiate an investigation and inform the affected PEPPOL Participant accordingly.
+. PEPPOL AP providers shall make received acknowledgment of receipts, including technical receipt at communication protocol level (e.g. an MDN), available to the PEPPOL Participant within 5 seconds after it is available.
+
+= Backup and recovery
+
+. PEPPOL AP providers shall have backup and recovery procedures in place to ensure a maximum of 6 hours’ loss of data.
+
+= Support services
+
+. PEPPOL AP providers shall provide set-up and support services to its own customers (PEPPOL Participants) and other PEPPOL service providers.
+. PEPPOL AP providers shall maintain a mailing list for subscription to service messages (e.g. announcement of service windows).
+. PEPPOL AP providers shall name an e-mail address and telephone number that can be used for reporting of incidents such as system failures, security incidents or other emergency situations.
+. The telephone contact shall be available during defined business hours. If English language is not supported by the telephone contact, a call-back service shall be established to ensure that efficient dialogue on the incident can be initiated within 2 hours.
+. Local language is preferred during analysis and resolution of reported incidents if both parties agree on this. If not, the English language is the default.
+. Any incident reported shall be responded to within four hours.
+. Information about how to get in contact with the support services, by phone or e-mail, shall be available on the Service Provider homepage.
+
+= Reporting
+
+. In case of major system failures causing more than 1 hours of down-time, the PEPPOL Authority shall be notified.
+. PEPPOL AP providers shall provide documentation of service levels on a monthly basis to the PEPPOL Authority with whom they have an agreement. The report shall be provided by the 5th in the coming month. A reporting template will be provided by the PEPPOL Authority.
+. If service levels are not deemed sufficient by the PEPPOL Authority, the service provider may be instructed to take appropriate measures to restore service quality.
+. PEPPOL AP providers shall report the number of transactions (i.e. the number of transactions for each unique Document Identifier) sent and/or received to the PEPPOL Authority with whom they have an agreement on a monthly basis. The report shall be provided by the 5th in the coming month. A reporting template will be provided by the PEPPOL Authority.
+
+= Exceptions
+
+. PEPPOL AP providers do not have to fulfil the services and service levels defined in this document if:
+.. the service provider is under a denial of service (DoS) attack;
+.. the PEPPOL Authority has approved lowering the SLA for a specific period of time and under specific conditions.
+. PEPPOL AP providers shall document the reasons for not fulfilling the required service levels in their monthly report outlined in clause 14.2.
