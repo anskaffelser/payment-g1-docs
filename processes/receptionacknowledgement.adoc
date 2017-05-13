@@ -1,0 +1,34 @@
+= Payment handling
+
+Payment handling is a set of document types used in addition to business documents flowing in the network.
+
+These messages uses the payment handling customization:
+`urn:fdc:difi.no:2017:payment:handling:1.0`
+
+There are currently no rules attached to payment handling except those defining document types part of payment handling.
+
+
+== Recepion acknowledgement
+
+The document type `ReceptionAcknowledgement` from link:https://github.com/difi/iso20022-extras[Payment Extras] is used for reception acknowledge.
+This message copies the process identifier for which it responds to, and the document type identifier is created using identifiers from source document.
+
+.How to construct the document type identifier:
+--
+* Namespace of Payment Extras (`urn:fdc:difi.no:2017:payment:extras-1`)
+* Separator (`::`)
+* Document type (`ReceptionAcknowledgement`)
+* Separator (`##`)
+* Identifier for payment handling (`urn:fdc:difi.no:2017:payment:handling:1.0`)
+* Separator (`:for:`)
+* Namespace of received document (`urn:iso:std:iso:20022:tech:xsd:pain.001.001.03`)
+* Separator (`:restricted:`)
+* Customization of received document (`urn:fdc:bits.no:2017:iso20022:1.5`)
+* Separator (`::`)
+* Version of ReceptionAcknowledgement (`1.0`)
+--
+
+Example of document type identifier:
+`urn:fdc:difi.no:2017:payment:extras-1::ReceptionAcknowledgement##urn:fdc:difi.no:2017:payment:handling:1.0:for:urn:iso:std:iso:20022:tech:xsd:pain.001.001.03:restricted:urn:fdc:bits.no:2017:iso20022:1.5::1.0`
+
+Reception acknowledgement is registered to the sender of ISO 20022 document types.

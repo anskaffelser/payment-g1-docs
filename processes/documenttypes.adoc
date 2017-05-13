@@ -1,0 +1,21 @@
+= Document types
+
+These document types are defined as part of ISO 20022 payment exchange:
+
+[cols="1,4", options="header"]
+|===
+| Name | Document type
+| Pain.001 | urn:iso:std:iso:20022:tech:xsd:pain.001.001.03
+| Pain.002 | urn:iso:std:iso:20022:tech:xsd:pain.002.001.03
+| Pain.008 | _unknown_
+| Pain.009 | _unknown_
+| Pain.010 | _unknown_
+| Pain.011 | _unknown_
+| Pain.012 | _unknown_
+| Camt.029 | _unknown_
+| Camt.052 | _unknown_
+| Camt.054 | urn:iso:std:iso:20022:tech:xsd:camt.054.001.02
+| Camt.055 | _unknown_
+|===
+
+All document types uses the same customization: `urn:fdc:bits.no:2017:iso20022:1.5`
