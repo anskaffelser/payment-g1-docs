@@ -1,14 +1,4 @@
-= Payment handling
-
-Payment handling is a set of document types used in addition to business documents flowing in the network.
-
-These messages uses the payment handling customization:
-`urn:fdc:difi.no:2017:payment:handling:1.0`
-
-There are currently no rules attached to payment handling except those defining document types part of payment handling.
-
-
-== Recepion acknowledgement
+= Recepion acknowledgement message
 
 The document type `ReceptionAcknowledgement` from link:https://github.com/difi/iso20022-extras[Payment Extras] is used for reception acknowledge.
 This message copies the process identifier for which it responds to, and the document type identifier is created using identifiers from source document.

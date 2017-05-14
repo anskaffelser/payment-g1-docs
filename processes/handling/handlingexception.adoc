@@ -1,0 +1,24 @@
+= Handling exception message
+
+The document type `HandlingException` from link:https://github.com/difi/iso20022-extras[Payment Extras] is used to notify sender of problems during handling of received content.
+This message copies the process identifier for which it responds to, and the document type identifier is created using identifiers from source document.
+
+.How to construct the document type identifier:
+--
+* Namespace of Payment Extras (`urn:fdc:difi.no:2017:payment:extras-1`)
+* Separator (`::`)
+* Document type (`HandlingException`)
+* Separator (`##`)
+* Identifier for payment handling (`urn:fdc:difi.no:2017:payment:handling:1.0`)
+* Separator (`:for:`)
+* Namespace of received document (`urn:iso:std:iso:20022:tech:xsd:pain.001.001.03`)
+* Separator (`:restricted:`)
+* Customization of received document (`urn:fdc:bits.no:2017:iso20022:1.5`)
+* Separator (`::`)
+* Version of ReceptionAcknowledgement (`1.0`)
+--
+
+Example of document type identifier:
+`urn:fdc:difi.no:2017:payment:extras-1::HandlingException##urn:fdc:difi.no:2017:payment:handling:1.0:for:urn:iso:std:iso:20022:tech:xsd:pain.001.001.03:restricted:urn:fdc:bits.no:2017:iso20022:1.5::1.0`
+
+Handling exception is registered to the sender of ISO 20022 document types.

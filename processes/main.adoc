@@ -16,4 +16,4 @@ include::documenttypes.adoc[]
 
 include::processes.adoc[]
 
-include::receptionacknowledgement.adoc[]
+include::handling/index.adoc[]
