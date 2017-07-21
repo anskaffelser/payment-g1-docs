@@ -1,0 +1,28 @@
+= Processes
+
+This is an overview of processes based upon "ISO 20022 messages in the Customer Bank interface - The profiles" by Bits.
+
+
+:leveloffset: +1
+
+include::payment_01.adoc[]
+
+include::payment_02.adoc[]
+
+include::payment_03.adoc[]
+
+include::payment_04.adoc[]
+
+include::payment_05.adoc[]
+
+include::payment_06.adoc[]
+
+include::payment_07.adoc[]
+
+include::payment_09.adoc[]
+
+include::payment_10.adoc[]
+
+include::payment_11.adoc[]
+
+:leveloffset: -1

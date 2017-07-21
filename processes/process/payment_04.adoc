@@ -1,0 +1,14 @@
+= Profile 04: Salary payments with request for cancelation
+
+Bank receives payment messages from customers, and returns status reports and notifications.
+Customer may request that previous payment initiations not yet processed, can be canceled.
+
+Identifier: `urn:fdc:bits.no:2017:profile:04:1.0`
+
+[cols="2,1", options="header"]
+|===
+| Document type | Sender
+| Camt.055 CustomerPaymentCancellationRequest | Customer
+| Pain.002 Payment status report (1..n) | Bank
+| Camt.029 ResolutionOfInvestigation | Bank
+|===

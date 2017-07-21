@@ -1,0 +1,13 @@
+= Profile 01: General Credit transfer Initiion
+
+Bank receives payment messages from customers, and returns status reports and notifications.
+
+Identifier: `urn:fdc:bits.no:2017:profile:01:1.0`
+
+[cols="2,1", options="header"]
+|===
+| Document type | Sender
+| Pain.001 Credit transfer initiation | Customer
+| Pain.002 Payment status report (1..n) | Bank
+| Camt.054 B2C debit notification | Bank
+|===

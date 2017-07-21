@@ -1,0 +1,12 @@
+= Profile 05: Billing
+
+Customer prosesses invoices (paperbased or eInvoice, and forwards to customer.
+Bank returns notification file for automated reconciliation of account receivable.
+
+Identifier: `urn:fdc:bits.no:2017:profile:05:1.0`
+
+[cols="2,1", options="header"]
+|===
+| Document type | Sender
+| Camt.054 B2C credit notification | Bank
+|===

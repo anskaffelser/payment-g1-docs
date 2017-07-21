@@ -1,0 +1,11 @@
+= Profile 11
+
+Customer receive messages from the bank for updating decision-/ liquidity -systems.
+
+Identifier: `urn:fdc:bits.no:2017:profile:11:1.0`
+
+[cols="2,1", options="header"]
+|===
+| Document type | Sender
+| Camt.052 B2C account report | Bank
+|===

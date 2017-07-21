@@ -1,0 +1,13 @@
+= Profile 07: Canselation of DirectDebit Initiation
+
+Customer may request that previous Direct Debit initiations not yet processed, can be canceled.
+
+Identifier: `urn:fdc:bits.no:2017:profile:07:1.0`
+
+[cols="2,1", options="header"]
+|===
+| Document type | Sender
+| Camt.055 CustomerPaymentCancellationRequest | Customer
+| Pain.002 Payment status report (1..n) | Bank
+| Camt.029 ResolutionOfInvestigation | Bank
+|===
