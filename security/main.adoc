@@ -1,6 +1,6 @@
-= Security requirements for secure file transactions.
+= Security requirements for secure file transactions
 Bits AS
-0.91
+0.91b
 :doctype: book
 :icons: font
 :toc: left
@@ -9,6 +9,11 @@ Bits AS
 :source-language: xml
 :sectanchors:
 :sectnums:
+
+
+== Introduction
+
+_TBA. Replaces ToC chapter in original document._
 
 
 == Document Information
@@ -70,6 +75,11 @@ Rc4B response code list revised after discussions with difi
 Annex 2 added
 | 20.09.2017
 | N. Lailey
+
+| 0.91b
+| Non-material changes in formating when switching to Asciidoctor.
+| 13.10.2017
+| E. K. Bergheim
 |===
 
 
@@ -280,7 +290,7 @@ The chapters below set out security requirements for participants
 
 === General requirements
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 |	#
 | Status
@@ -357,7 +367,7 @@ The chapters below set out security requirements for participants
 
 ===  Requirements to Corner 1
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -414,7 +424,7 @@ The chapters below set out security requirements for participants
 
 === Requirements to trust anchor
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -445,7 +455,7 @@ The chapters below set out security requirements for participants
 
 BCP is a shared certificate server for storage of public certificates. It will store public certificates from participants who may assume the role of C4, and as such receive encrypted files, and make the relevant public certificates available to C1 participants as required. Certificates will then have to be validated with trust anchor service provider.
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -478,7 +488,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 === Requirements for transport from corner 1 to corner 2
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -492,7 +502,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 === Requirements to Corner 2 and 3
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -506,7 +516,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 === Requirements for transport from corner 3 to corner 4
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -517,10 +527,10 @@ BCP is a shared certificate server for storage of public certificates. It will s
 | Transport security is recommended to follow RFC-7525 (TLS/DTLS)
 |===
 
- 
+
 === Requirements, Corner 4
 
-[cols="1,1,5", options="header"]
+[cols="1,1,6", options="header"]
 |===
 | #
 | Status
@@ -561,13 +571,13 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 
 [appendix]
-== Appendix 1 - Encryption process
+== Encryption process
 
 image::images/encryption-process.png[width=100%]
 
 
 [appendix]
-== Appendix 2 - Storage of private keys
+== Storage of private keys
 
 Security best practices for corporate environments with large transactions, and transaction volume where the private key must be protected by the strictest means:
 
