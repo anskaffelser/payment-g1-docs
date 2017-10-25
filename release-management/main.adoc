@@ -1,0 +1,151 @@
+= Release Management
+Agency of Public Management and eGovernment (Difi)
+v1.0.0
+:description: Description of release management of artifacts related to transmission of payment messages.
+:doctype: book
+:icons: font
+:toc: left
+:source-highlighter: coderay
+:toclevels: 2
+:sectanchors:
+:sectnums:
+
+{description}
+
+:leveloffset: +1
+
+= Revision history
+
+
+== Version 1.x
+
+
+=== Version 1.0.0
+
+[cols="1,6,1", options="header"]
+|===
+| Issue
+| Description
+| Severity
+
+| _None_
+| Initial version
+| Major
+|===
+
+
+== Contributors
+
+* Erlend Klakegg Bergheim, Agency of Public Management and eGovernment
+* Olav Astad Kristiansen, Agency of Public Management and eGovernment
+
+
+= Responsibilites
+
+
+== Principal owner
+
+Bits act as pricipal owner of all documentation, and coordinates new releases on behalf of the banks.
+Bits must accept every change before review starts.
+
+
+== Performing management
+
+Agency of Public Management and eGovernent is responsible for publishing and maintaining all documentation, in addition to coordinating releases.
+
+
+= Versioning
+
+Documents related to transmission of payment messages are versioned heavily inspired by link:http://semver.org/[Semantic Versioning]. Additional labels are not used.
+
+Active use of periods of phase-in and phase-out are used to handle changes without having to create a major versions.
+
+
+== Patch versions
+
+Description of changes part of patch releases:
+
+* Textual clarifications.
+* Updating code lists.
+
+Updates do patch versions are mandatory as of publication date unless otherwise stated.
+
+
+== Minor versions
+
+Description of changes part of minor releases:
+
+* Adding and removing support for new algorithms.
+* Updating code lists.
+* New requirements.
+* Updates to building blocks.
+
+Each change triggering minor version will have a defined period of phase-in and phase-out.
+
+
+== Major versions
+
+New major versions are exptected to contain breaking changes.
+Publication of major versions contains a pre-defined date when then version is mandatory in addition to period for phase-in and phase-out of previous major version.
+
+
+= Schedule
+
+[cols="2,1,1,1", options="header"]
+|===
+|
+| Major (X.0.0)
+| Minor (y.X.0)
+| Patch (y.y.X)
+
+| Potential notification
+| September 1st +
+(year 1)
+| March 15th +
+September 15th
+| December 15th +
+March 15th +
+July 15th +
+September 15th
+
+| Potential review
+| March 1st +
+(year 2)
+| April 15th +
+October 15th
+| January 15th +
+April 15th +
+August 15th +
+October 15th
+
+| End of review
+| August 1st +
+(year 2)
+| May 5th +
+November 5th +
+| February 5th +
+May 5th +
+September 5th +
+November 5th
+
+| Potential release
+| September 1st +
+(year 2)
+| May 15th +
+November 15th +
+| February 15th +
+May 15th +
+September 15th +
+November 15th
+
+|===
+
+Notifications must be available at the defined date or earlier.
+Notification may contain minor changes (extending amount of days) to the release schedule for the given release to avoid Fridays, weekends and public holidays.
+
+
+= Publication
+
+* All notifications are published on link:https://vefa.difi.no/[VEFA] as announcements (RSS supported).
+* All updated documents are made available on link:https://vefa.difi.no[VEFA] side by side current versions during review. Previous versions are removed from the portal when new versions are released.
+* Aggredated release note is provided as part of each release.
