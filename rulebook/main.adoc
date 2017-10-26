@@ -446,7 +446,7 @@ The payment services used by a debtor or the reconciliation services used by a c
 In any case the ERP solution provider is in no way involved in the business transactions and has no direct responsibility for the actual business content of the ISO 20022-based messages being exchanged.
 It is the responsibility of the debtor/creditor to ensure that the application functions it applies comply to the rules, principles and requirements as stated in this document as well as any applicable legal requirements.
 
-WARNING: The ERP solution provider may have a written statement of conformance to applicable rules and specifications outlined in this rulebook.
+IMPORTANT: The ERP solution provider may have a written statement of conformance to applicable rules and specifications outlined in this rulebook.
 
 
 == The role of a shared service centre
@@ -454,7 +454,7 @@ Especially in larger organisations the use of a shared service centre is becomin
 
 It is the responsibility of the debtor/creditor to ensure that any entity acting on its behalf comply to the rules, principles and requirements as stated in this document as well as any applicable legal requirements.
 
-WARNING: The shared service centre may have a written statement of conformance to applicable rules and specifications outlined in this rulebook.
+IMPORTANT: The shared service centre may have a written statement of conformance to applicable rules and specifications outlined in this rulebook.
 
 
 == The role of a banks service provider
@@ -576,13 +576,13 @@ Each PEPPOL Participant using the Enhanced PEPPOL eDelivery network need to be r
 
 The actual registration in the SMP will be done by the PEPPOL AP Provider.
 
-WARNING: The PEPPOL AP Provider shall register receive capabilities in an SMP for all PEPPOL Participants it services.
+IMPORTANT: The PEPPOL AP Provider shall register receive capabilities in an SMP for all PEPPOL Participants it services.
 
 As there is a close relationship and dependency in the use of ISO 20022-based financial messages in the different business processes as described in link:#ref-25[[25\]], the SMP provider need to ensure that the PEPPOL Participants are registered with a formally issued PEPPOL Participant ID and a correct and consistent set of receive capabilities.
 
-WARNING: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
+IMPORTANT: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
 
-WARNING: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have functionality implemented to ensure that PEPPOL Participants are registered with a correct and consistent set of receive capabilities as per link:#ref-26[[26\]].
+IMPORTANT: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have functionality implemented to ensure that PEPPOL Participants are registered with a correct and consistent set of receive capabilities as per link:#ref-26[[26\]].
 
 
 == The role of a PEPPOL AP Provider
@@ -591,7 +591,7 @@ A PEPPOL Participant, i.e. a sender or receiver of ISO 20022-based financial mes
 
 On the other hand, there is a requirement on the PEPPOL AP Providers participating in the Enhanced PEPPOL eDelivery network to offer services and service levels conformant to the stated requirements in link:#ref-14[[14\]]. This include a requirement on the PEPPOL AP provider to maintain an internal register of addresses suitable for routing of received messages and acknowledgements to the correct Debtor/Creditor.
 
-WARNING: A PEPPOL AP Provider offering services in the Enhanced PEPPOL eDelivery network shall have its services accredited as conformant to the SLA requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network link:#ref-14[[14\]].
+IMPORTANT: A PEPPOL AP Provider offering services in the Enhanced PEPPOL eDelivery network shall have its services accredited as conformant to the SLA requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network link:#ref-14[[14\]].
 
 
 == The role of the Business Certificate Publisher
@@ -600,9 +600,9 @@ The role of the Business Certificate Publisher link:#ref-32[[32\]] is to store a
 
 The Business Certificate Publisher thus fulfils the role as a qualified certificate publisher for secure messaging.
 
-WARNING: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
+IMPORTANT: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
 
-WARNING: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that only certificates issued by a qualified certificate issuer are used.
+IMPORTANT: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that only certificates issued by a qualified certificate issuer are used.
 
 The Business Certificate Publisher can be realized as either a centralised or a distributed component in the enhanced PEPPOL eDelivery networkfootnote:[The first version of Business Certificate Publisher service will be hosted by Difi as a centralised service.], where PEPPOL Participants will have access to store their public keys used within a business process. In the future, it is expected that the SMP will be used to locate an organization’s published certificate, and thus facilitate a decentralised use.
 
@@ -624,58 +624,58 @@ The basic requirements outlined in link:#ref-3[[3\]] has been further elaborated
 
 The document defines requirements to be observed by all actors involved in the process.
 
-WARNING: PEPPOL Participants and PEPPOL AP Providers shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
+IMPORTANT: PEPPOL Participants and PEPPOL AP Providers shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
 
-WARNING: The provider of the Business certificate Pubiser service shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
+IMPORTANT: The provider of the Business certificate Pubiser service shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
 
 
 == Validation of business transactions
 
 Validation is used to ensure that the content of a message is technically correct and complies to its governing specification(s). This is typically done by validating an XML instance document against its governing XML Schema and/or by running a set of schematron rules to validate the actual content.
 
-WARNING: The PEPPOL Participant acting in the role as sender of an ISO 20022-based financial messages shall ensure that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
+IMPORTANT: The PEPPOL Participant acting in the role as sender of an ISO 20022-based financial messages shall ensure that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
 
-WARNING: The PEPPOL Participant acting in the role as receiver of an ISO 20022-based financial messages may validate that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
+IMPORTANT: The PEPPOL Participant acting in the role as receiver of an ISO 20022-based financial messages may validate that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
 
-WARNING: If the receiver of an ISO 20022-based financial messages detects errors during validation or processing it shall advise the sender accordingly by return of an error message as specified in link:#ref-4[[4\]].
+IMPORTANT: If the receiver of an ISO 20022-based financial messages detects errors during validation or processing it shall advise the sender accordingly by return of an error message as specified in link:#ref-4[[4\]].
 
-WARNING: The sending PEPPOL AP provider offering services in the Enhanced PEPPOL eDelivery network shall ensure that the file sent is compliant to all appropriate specification for the Enhanced PEPPOL eDelivery network.
+IMPORTANT: The sending PEPPOL AP provider offering services in the Enhanced PEPPOL eDelivery network shall ensure that the file sent is compliant to all appropriate specification for the Enhanced PEPPOL eDelivery network.
 
 
 == Packaging
 
 Before sending an ISO 20022-based financial message, the XML-file need to be prepared and packaged into an appropriate envelope format.
 
-WARNING: The sender of an ISO 20022-based financial messages shall ensure that the message is packaged for transmission in compliance to link:#ref-18[[18\]].
+IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that the message is packaged for transmission in compliance to link:#ref-18[[18\]].
 
 
 == Addressing
 
 To facilitate routing of the envelope between PEPPOL APs, even after its content is encrypted, there is also a need to carry the basic addressing information and information on the type of data carried in the envelope outside of the actual financial message itself. This is typically done using some form of a header that carries data about the business transaction carried in the envelope.
 
-WARNING: The sender of an ISO 20022-based financial messages shall ensure that the required addressing information is available in compliance to link:#ref-21[[21\]].
+IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that the required addressing information is available in compliance to link:#ref-21[[21\]].
 
 
 == Processing metadata
 
 To facilitate internal routing and correct processing of the business transaction by the receiver, there is also a need to carry some metadata about the customer relationship between the bank and its customer outside of the actual ISO 20022-based financial message.
 
-WARNING: The sender of an ISO 20022-based financial messages shall ensure that the required metadata-file is available in compliance to link:#ref-27[[27\]].
+IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that the required metadata-file is available in compliance to link:#ref-27[[27\]].
 
 
 == Audit trail and evidence
 
 An audit trail is a chronological record, or set of records, that provide documentary evidence of the sequence of activities that have affected a message. In a process involving several actors and roles, an audit trail can be established by collecting acknowledgements generated at different steps in the process.
 
-WARNING: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall log all PEPPOL Business Documents/payloads that they send or receive.
+IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall log all PEPPOL Business Documents/payloads that they send or receive.
 
-WARNING: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall implement procedures to follow-up and initialte investigation if acknowledgments are not received.
+IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall implement procedures to follow-up and initialte investigation if acknowledgments are not received.
 
-WARNING: In case of non-delivery, the PEPPOL AP Provider shall informn the PEPPOL Participant. The PEPPOL AP Provider shall not do a re-send of messages.
+IMPORTANT: In case of non-delivery, the PEPPOL AP Provider shall informn the PEPPOL Participant. The PEPPOL AP Provider shall not do a re-send of messages.
 
 In addition to the logging, which primarely is done for operational purposes, the acotrors are required to generate and store secure evidence of the documents exchanged.
 
-WARNING: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall generate and store REM evidence in compliance to link:#ref-20[[20\]] for the PEPPOL Business Documents/payloads they handle.
+IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall generate and store REM evidence in compliance to link:#ref-20[[20\]] for the PEPPOL Business Documents/payloads they handle.
 
 
 = Enhanced PEPPOL eDelivery
@@ -938,14 +938,14 @@ In the role as Debtor/Creditor a business entity will have an agreement with its
 
 The bank agreement will provide governance for the business relationship between the two actors, including provisions for the actual use of the relevant ISO 20022-based messages.
 
-WARNING: The customer shall have a signed contract with its bank regarding the use of file based payments services.
+IMPORTANT: The customer shall have a signed contract with its bank regarding the use of file based payments services.
 
 
 == Service provision agreement
 
 In the role as PEPPOL Participant the business entity, as well as the bank, will have an agreement with a PEPPOL AP Provider. The business entity and the bank may make use of the same or different PEPPOL AP Providers.
 
-WARNING: A PEPPOL Participant shall have a signed contract with its PEPPOL AP Provider.
+IMPORTANT: A PEPPOL Participant shall have a signed contract with its PEPPOL AP Provider.
 
 This service provision agreement will govern the details related to the services offered by the PEPPOL AP Provider and how the PEPPOL AP service is connected to the internal ICT infrastructure of the PEPPOL Participant. The detailed content of this agreement is left for the parties to define.
 
@@ -960,9 +960,9 @@ The PEPPOL Agreement Framework for Enhanced PEPPOL eDelivery is built up of the 
 * The PEPPOL eDelivery Agreement which authorises the PEPPOL AP Provider to provide PEPPOL AP services in the Enhanced PEPPOL eDelivery network;
 * The PEPPOL Payment Agreement which authorises the PEPPOL AP Provider to provide services related to the transfer of ISO 20022-based financial messages in the Enhanced PEPPOL eDelivery network
 
-WARNING: A PEPPOL AP Provider offering services for transport of ISO 20022-based financial messages in the Enhanced PEPPOL eDelivery network shall have a PEPPOL eDelivery Agreement and a PEPPOL Payment Agreement signed with the appropriate PEPPOL Authority.
+IMPORTANT: A PEPPOL AP Provider offering services for transport of ISO 20022-based financial messages in the Enhanced PEPPOL eDelivery network shall have a PEPPOL eDelivery Agreement and a PEPPOL Payment Agreement signed with the appropriate PEPPOL Authority.
 
-WARNING: The PEPPOL AP shall be verified and certified as conferment to the specifications of the Enhanced PEPPOL eDelivery network by the PEPPOL Authority with whom the service provider has an agreement before they will be enrolled with a production certificate
+IMPORTANT: The PEPPOL AP shall be verified and certified as conferment to the specifications of the Enhanced PEPPOL eDelivery network by the PEPPOL Authority with whom the service provider has an agreement before they will be enrolled with a production certificate
 
 
 = Use cases
@@ -987,9 +987,9 @@ Even in this most complex scenario, it is the PEPPOL Participant identified as t
 .Service providers acting on behalf of the PEPPOL Participant.
 image::images/service-providers.png[]
 
-WARNING: A PEPPOL Participant shall ensure that signed contracts exist for all third-party services provided on its behalf.
+IMPORTANT: A PEPPOL Participant shall ensure that signed contracts exist for all third-party services provided on its behalf.
 
-WARNING: A PEPPOL Participant shall ensure that service providers acting on its behalf has access to sufficient information (e.g. internal routing information and certificates) allowing them to fulfil their obligations as expected.
+IMPORTANT: A PEPPOL Participant shall ensure that service providers acting on its behalf has access to sufficient information (e.g. internal routing information and certificates) allowing them to fulfil their obligations as expected.
 
 == Transfer of legal responsibility
 
@@ -997,7 +997,7 @@ As is noted above, it is the PEPPOL Participant identified as the sender or rece
 
 It follows from this that the PEPPOL Participant has responsibility for all service providers acting on its behalf.
 
-WARNING: A PEPPOL Participant shall ensure secure and reliable processing of information within its domain of responsibility.
+IMPORTANT: A PEPPOL Participant shall ensure secure and reliable processing of information within its domain of responsibility.
 
 .Transfer of legal responsibility.
 image::images/legal-responsibility.png[]
