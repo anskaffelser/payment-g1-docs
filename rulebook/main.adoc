@@ -1,6 +1,6 @@
 = Rulebook
 Bits AS
-v0.92
+v0.93
 :description: Enhanced PEPPOL eDelivery as communication infrastructure for financial messages in ISO 20022
 :doctype: book
 :icons: font
@@ -13,7 +13,7 @@ v0.92
 {description}
 
 Author:: Jostein Frømyr
-Date:: 26. October 2017
+Date:: 23. November 2017
 Status:: Draft for use in PoC
 
 
@@ -82,6 +82,16 @@ Final version approved by Bits as basis for PoC.
 | 0.92
 | Updated based on comments from PoC. Besides some minor editorial corrections, the following issues has been addressed in this version: 7, 8, 17, 20, 22, 23, 24 and 31.
 | Jostein Frømyr
+
+| 22.11.2017
+| 0.93
+a| Updated based on comments from PoC. Besides some minor editorial corrections, the following issues has been addressed in this version:
+
+*	Issue 18 related to ref [25]. Reference removed.
+*	[3] removed as covered by [12]
+*	Updated links to external documents
+*	Updated list of terms and abreviations
+| Jostein Frømyr
 |===
 
 
@@ -118,7 +128,7 @@ http://peppol.eu/get-involved/join-openpeppol/?rel=tab119
 | OpenPEPPOL
 
 | [6] [[ref-06]]
-| PEPPOL Transport Infrastructure Agreements in Norway - Access Point Provider Agreement
+| PEPPOL Transport Infrastructure Agreements in Norway – Access Point Provider Agreement
 https://www.anskaffelser.no/verktoy/avtaler-mellom-difi-og-aksesspunkt (Partly in Norwegian only)
 | Difi
 
@@ -172,18 +182,9 @@ http://peppol.eu/downloads/?rel=tab87
 https://www.bits-standards.org (Login required)
 | Bits
 
-| [25] [[ref-25]]
-| ISO 20022 messages in the Customer Bank interface – The receiver profiles
-| Bits
-
-| [3] [[ref-3]]
-| Bits sikker dataoverføring, versjon 1.0.1 av November 2016. Redigert versjon relater til Bank – Kunde Grensesnittet (Norwegian only)
-Available on request post@bits.no
-| Bits
-
 | [12] [[ref-12]]
 | Security requirements for secure file transactions, version 0.7 (12 June 2017)
-Available on request post@bits.no
+https://test-vefa.difi.no/iso20022/doc/security/
 | Bits
 
 | [11] [[ref-11]]
@@ -204,7 +205,7 @@ https://vefa.difi.no/iso20022/standard/peppol/
 
 | [14] [[ref-14]]
 | Service level requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network
-https://vefa.difi.no/iso20022/tools/requirements-ap/
+https://test-vefa.difi.no/iso20022/doc/requirements-ap/
 | Difi
 
 | [18] [[ref-18]]
@@ -253,30 +254,48 @@ https://vefa.difi.no/bb/standard/bcp/
 
 == Terms and abbreviations
 
-Business transaction:: The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
-File exchange:: The physical data-file moving “on the wire”.
-ISO 20022:: An ISO standard for electronic data interchange between financial institutions.
-AP:: PEPPOL access point.
+Ack:: Acknowledgment
+AP:: PEPPOL access point. +
 A component providing access to the PEPPOL eDelivery network.
-SMP:: PEPPOL Service Metadata Publisher.
-A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
-SML:: PEPPOL Service metadata Locator.
-A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
-ASiC-E:: Associated Signature Containers – extended
-AS2:: Applicability Statement 2.
+AS2:: Applicability Statement 2. +
 The basic communication protocol used in the PEPPOL eDelivery network.
+ASiC-E:: Associated Signature Containers – extended
+BCP:: Business Certificate Publisher
+Business transaction:: The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
 CEF:: Connecting European Facility
+CGI MP:: Common Global Implementation – Market Practice
+DSI:: Digital Service Infrastructure
+DNS:: Domain Name System
+ELMA:: Elektronisk motakteradresseregister +
+The PEPPOL SMP service used in the Norwegian market
+ERP:: Enterprise Resource Planning
+ETSI:: European Telecommunications Standards Institute
+File exchange:: The physical data-file moving “on the wire”.
+HTTP:: Hypertext Transfer Protocol
+ISO 20022:: An ISO standard for electronic data interchange between financial institutions.
 MDN:: Message Disposition Notification
+MIC:: Message Integrity Check
+Nac:: Negative acknowledgment
 OpenPEPPOL:: A non-profit international association under Belgian law (AISBL).
 Provides overall governance for the PEPPOL eDelivery network.
 PEPPOL:: Pan-European Public Procurement Online
-SBDH:: Standard Business Document Header
-ETSI:: European Telecommunications Standards Institute
-ELMA:: Elektronisk motakteradresseregister
-The PEPPOL SMP service used in the Norwegian market
 PEPPOL Authority:: An organisation assigned the responsibility to provide governance for the implementation and use of PEPPOL within a defined domain
 http://peppol.eu/who-is-who/peppol-authorities/?rel=tab256
+PEPPOL Participant:: An organization using the PEPPOL eDelivery network for exchange of PEPPOL Business Documents
+PKI:: Public Key Infrastructure
 PPID:: PEPPOL Participant ID
+RC4:: Reception Acknowledgement Message
+RC4b:: Exception Handling
+REM:: Registered Electronic Mail
+SBD:: Standard Business Document
+SBDH:: Standard Business Document Header
+SLA:: Service Level Agreement
+SML:: PEPPOL Service metadata Locator. +
+A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
+SMP:: PEPPOL Service Metadata Publisher. +
+A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
+TLS:: Transport Layer Security
+XML:: Extensible Mark-up Language
 
 
 == Document conventions
@@ -314,14 +333,14 @@ This rulebook and the referenced documents are governed by the procedures applic
 
 This rulebook and the specifications for use of the ISO 2022-based financial messages are governed by Bits according to the procedures outlined in link:#ref-23[[23\]]. The key principles of this procedure are:
 
-* New versions of specifications will be developed in an open and transparent manner in consultation with the banks and other key stakeholders;
-* All Bits Guidelines shall be compliant to the relevant ISO 20022 specification and any CGI MP Guidelines;
+* New versions of specifications will be developed in an open and transparent manner in consultation with the banks, Difi and other key stakeholders;
+* All Bits Guidelines shall be compliant to the relevant ISO 20022 specification and any MP Guidelines;
 * Specifications will be maintained on an annual basis based on changes in the base specifications and requests received from the market;
 * It is expected that 3-4 versions of a specification will be available for use by the market at any given point in time.
 
 The specifications related to the Enhanced PEPPOL eDelivery network will be governed by Difi in accordance with the procedures outlined in link:#ref-24[[24\]]. The key principles of these procedure are:
 
-* New versions of specifications and components will be developed in an open and transparent manner in consultation with involved stakeholders;
+* New versions of specifications and components will be developed in an open and transparent manner in consultation with Bits and the involved stakeholders;
 * To allow a smooth and friction free transition, two versions of the element subject to maintenance must be allowed;
 * To ensure non‐disrupted operations and full interoperability of the messages exchanged in the PEPPOL network, the period during which two parallel versions are allowed should be as short as possible;
 * Any changes affecting the current (mandatory) PEPPOL element should be notified, communicated and agreed upon a minimum of 6 months in advance;
@@ -338,7 +357,7 @@ The specifications related to the Enhanced PEPPOL eDelivery network will be gove
 
 The Norwegian banks are in the process of implementing ISO 20022-based messages for handling of payments, such as payment instructions from customers or notifications sent to customers. This development implies an introduction of ISO 20022-based massages in the bank-customer interface and a gradual phase-out of the currently established formats. As part of this implementation there have also been a growing recognition for improvements to the communication infrastructures used. It is recognised that any future communication infrastructure used in the bank-customer interface need to build upon infrastructures and standards commonly accepted in the market and provide the technical and legal security required for this type of business transactions.
 
-The PEPPOL eDelivery network, currently used by some 70.000 private and public entities being serviced by more than 50 access points and exchanging more than 35 million business documents in 2016, represents such an infrastructure.
+The PEPPOL eDelivery network, currently used by some 90.000 private and public entities being serviced by more than 50 access points and exchanging more than 35 million business documents in 2016, represents such an infrastructure.
 
 The vision of this initiative is to introduce an enhanced version of the PEPPOL eDelivery network as the common solution for transport of ISO 20022-based financial messages.
 
@@ -360,7 +379,7 @@ The objective of this rulebook is to identify and describe the rules, principles
 
 image::images/objectives.png[]
 
-Although this rulebook is aimed at the Norwegian market, it is expected that the technical rules, principles and requirements expressed could be applied also in other markets.  The actual use and content of the ISO 20022-based financial messages will however be constrained to the Norwegian market.
+Although this rulebook is aimed at the Norwegian market, it is expected that the technical rules, principles and requirements expressed could be applied also in other markets and application domains. The actual use and content of the ISO 20022-based financial messages will however be constrained to the Norwegian market.
 
 
 == Binding nature of the Rulebook
@@ -466,7 +485,7 @@ It is the responsibility of the bank to ensure that the application functions it
 
 = The application domain
 
-The actors and roles involved at the application domain are the same as those at the business domain as illustrated in Figure 2 above. These roles will exchange ISO 20022-based financial messages as defined in link:#ref-4[[4\]] depending on the business scenario implemented as described in link:#ref-25[[25\]] depending on the agreement between the bank and its customers.
+The actors and roles involved at the application domain are the same as those at the business domain as illustrated in Figure 2 above. These roles will exchange ISO 20022-based financial messages as identified in the below table defined in link:#ref-4[[4\]] depending on the business scenario implemented as the agreement between the bank and its customers.
 
 The relevant business scenarios supported are:
 
@@ -578,7 +597,7 @@ The actual registration in the SMP will be done by the PEPPOL AP Provider.
 
 IMPORTANT: The PEPPOL AP Provider shall register receive capabilities in an SMP for all PEPPOL Participants it services.
 
-As there is a close relationship and dependency in the use of ISO 20022-based financial messages in the different business processes as described in link:#ref-25[[25\]], the SMP provider need to ensure that the PEPPOL Participants are registered with a formally issued PEPPOL Participant ID and a correct and consistent set of receive capabilities.
+As there is a close relationship and dependency in the use of ISO 20022-based financial messages in the different business processes as described in section 5 above, the SMP provider need to ensure that the PEPPOL Participants are registered with a formally issued PEPPOL Participant ID and a correct and consistent set of receive capabilities.
 
 IMPORTANT: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
 
@@ -612,9 +631,9 @@ The Business Certificate Publisher can be realized as either a centralised or a 
 
 == Secure message exchange
 
-A feasibility study issued by the Norwegian banks link:#ref-3[[3\]] outlines the basic requirements for secure and reliable exchange of financial messages between banks and their customers. Besides the traditional key elements of secure and reliable messaging discussed in the sub-sections below, the reports emphasise the need to establish a qualified certificate provider to facilitate security in an environment where the sender and receiver are more or less unknown for each other.
+A feasibility study issued by the Norwegian banks identifies the basic requirements for secure and reliable exchange of financial messages between banks and their customers. Besides the traditional key elements of secure and reliable messaging discussed in the sub-sections below, the reports emphasise the need to establish a qualified certificate provider to facilitate security in an environment where the sender and receiver are more or less unknown for each other.
 
-The basic requirements outlined in link:#ref-3[[3\]] has been further elaborated in link:#ref-12[[12\]] which defines the minimum security requirements for data transport in the financial industry. This specification defines requirements related to key security aspects such as:
+These basic requirements has been further elaborated in link:#ref-12[[12\]] which defines the minimum security requirements for data transport in the financial industry. This specification defines requirements related to key security aspects such as:
 
 * Confidentiality;
 * Authentication;
