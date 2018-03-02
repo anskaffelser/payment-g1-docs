@@ -1,7 +1,7 @@
 = Release Management
 Agency of Public Management and eGovernment (Difi)
 v1.0.0
-:description: Description of release management of artifacts related to transmission of payment messages.
+:description: Description of release management of documents related to transmission of payment messages.
 :doctype: book
 :icons: font
 :toc: left
@@ -40,45 +40,66 @@ v1.0.0
 * Olav Astad Kristiansen, Agency of Public Management and eGovernment
 
 
+= Scope
+
+This document descibes the process for release management of documents related to transmission of payment messages.
+
+Documents part of this release management:
+
+* Packaging of ISO 20022 financial documents
+* Payment Extras
+* Payment processes
+* Release management
+* Requirements for Access Points
+* Rulebook
+* Security requirements for secure file transactions
+* Use of (enhanced) PEPPOL eDelivery network for exchange of ISO 20022-based payment messages
+
+Release management of documents, specifications, etc. provided by OpenPEPPOL referenced from above documents is handled by OpenPEPPOL and is out of scope for this document.
+
+Release management of documents, specifications, etc. provided by Agency of Public Management and eGovernment (Difi) referenced from above documents is handled by Difi and is out of scope for this document.
+
+
 = Responsibilites
 
+Bits:
 
-== Principal owner
+* Acting as pricipal owner of all documents.
+* Coordinating dialog on behalf of the banks with regard to new releases.
 
-Bits act as pricipal owner of all documentation, and coordinates new releases on behalf of the banks.
-Bits must accept every change before review starts.
+Agency of Public Management and eGovernment:
 
-
-== Performing management
-
-Agency of Public Management and eGovernent is responsible for publishing and maintaining all documentation, in addition to coordinating releases.
+* Publishing and maintaining all documents.
+* Coordination of releases.
 
 
 = Versioning
 
 Documents related to transmission of payment messages are versioned heavily inspired by link:http://semver.org/[Semantic Versioning]. Additional labels are not used.
 
-Active use of periods of phase-in and phase-out are used to handle changes without having to create a major versions.
-
 
 == Patch versions
 
 Description of changes part of patch releases:
 
-* Textual clarifications.
-* Updating code lists.
+* *Textual clarifications* +
+Improvment of documents to ensure equal understanding of content.
+
+* *Updating code lists* +
+Adding new codes and removing codes already phased out.
 
 Updates do patch versions are mandatory as of publication date unless otherwise stated.
 
 
 == Minor versions
 
-Description of changes part of minor releases:
+In addition to changes part of patch versions, this changes may be part of minor releases:
 
-* Adding and removing support for new algorithms.
-* Updating code lists.
-* New requirements.
-* Updates to building blocks.
+* *Adding and removing support for new algorithms* +
+Adding new algorithms to be suppored and removing algorithms aldready phased out.
+
+* *New requirements* +
+Adding support for new requirements and new features.
 
 Each change triggering minor version will have a defined period of phase-in and phase-out.
 
@@ -86,7 +107,7 @@ Each change triggering minor version will have a defined period of phase-in and 
 == Major versions
 
 New major versions are exptected to contain breaking changes.
-Publication of major versions contains a pre-defined date when then version is mandatory in addition to period for phase-in and phase-out of previous major version.
+Publication of major versions contains a pre-defined date when then version is mandatory in addition to period for phase-in of the new version and phase-out of previous major version.
 
 
 = Schedule
@@ -142,6 +163,14 @@ November 15th
 
 Notifications must be available at the defined date or earlier.
 Notification may contain minor changes (extending amount of days) to the release schedule for the given release to avoid Fridays, weekends and public holidays.
+
+
+== Implementation
+
+Active use of periods of phase-in and phase-out are used to handle changes without having to create a major versions.
+
+Implemententation of changes is done by the individual implementer.
+Implementations must be updated according to updated documents within the communicated timeframe.
 
 
 = Publication
