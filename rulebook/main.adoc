@@ -1,6 +1,6 @@
 = Rulebook
 Bits AS
-v1.0.0
+v1.1.0 SNAPSHOT
 :description: Enhanced PEPPOL eDelivery as communication infrastructure for financial messages in ISO 20022
 :doctype: book
 :icons: font
@@ -101,6 +101,7 @@ a| Updated based on comments from PoC. Besides some minor editorial corrections,
 | 09.05.2018
 | 0.95
 a| Updated based on comments from PoC and work related to onboarding. Besides some minor editorial corrections, the following issues has been addressed in this version:
+
 * Added source for [23] and [24] (section 1.2)
 * Re-phrased the definition of PEPPOL Participant (section 1.3 and 6)
 * Updates to the governance procedures (section 1.5)
@@ -115,6 +116,23 @@ a| Updated based on comments from PoC and work related to onboarding. Besides so
 | Bi-weekly collaboration meeting decides to elevate version 0.95 to version 1.0.0.
 |
 
+| XX.XX.2019
+| 1.1.0
+a| Updates related to BCP:
+
+* Updating link to BCP documentation (1.2).
+
+Adding information about BCL:
+
+* Added to list of terms and abbreviations (1.3).
+* Added as role in messaging and transport domain (6).
+* Added information as part of Enhanced PEPPOL eDelivery (8.2.4).
+
+Other:
+
+* Removing information about who is hosting PEPPOL SML (6, 8.2.1).
+
+| Erlend Klakegg Bergheim
 |===
 
 
@@ -275,8 +293,8 @@ https://github.com/difi/iso20022-package/blob/master/README.adoc
 | Difi
 
 | [32] [[ref-32]]
-| Specification of the Business Certificate Publisher (BCP) +
-https://vefa.difi.no/bb/standard/bcp/
+| Specifications related to Business Certificate Publisher (BCP) +
+https://vefa.difi.no/bcp/
 | Difi
 |===
 
@@ -289,6 +307,7 @@ A component providing access to the PEPPOL eDelivery network.
 AS2:: Applicability Statement 2. +
 The basic communication protocol used in the PEPPOL eDelivery network.
 ASiC-E:: Associated Signature Containers – extended
+BCL:: Business Certificate Locator
 BCP:: Business Certificate Publisher
 Business transaction:: The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
 CEF:: Connecting European Facility
@@ -320,7 +339,7 @@ REM:: Registered Electronic Mail
 SBD:: Standard Business Document
 SBDH:: Standard Business Document Header
 SLA:: Service Level Agreement
-SML:: PEPPOL Service metadata Locator. +
+SML:: PEPPOL Service Metadata Locator. +
 A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
 SMP:: PEPPOL Service Metadata Publisher. +
 A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
@@ -606,17 +625,20 @@ h| PEPPOL AP Provider
 h| PEPPOL SMP
 | The PEPPOL SMP service is a repository of information about PEPPOL Participants and their capabilities to receive ISO 20022-based financial messages, as well as the PEPPOL AP Provider used.
 
-ELMA is the centralised SMP service used In the Norwegian market provided by Difi.
+// ELMA is the centralised SMP service used In the Norwegian market provided by Difi.
 
 h| PEPPOL SML
 | The PEPPOL SML service is a centralised component of the PEPPOL eDelivery network functioning as a registry of PEPPOL Participants and the SMP in which further information may be found.
 
-The PEPPOL SML is provided under contract by the EC unit DG DIGIT.
+// The PEPPOL SML is provided under contract by the EC unit DG DIGIT.
 
 h| Business Certificate Publisher
 | The Business Certificate Publisher is a component introduced for the Enhanced PEPPOL eDelivery network to store and make available qualified certificate upon lookup.
 
 In the first phase, the Business Certificate Publisher will be hosted by DIFI as a central component. In the future, the PEPPOL SMP will be used to locate a PEPPOL Participants published certificate.
+
+h| Business Certificate Locator
+| The Business Certificate Publisher is a centralised component functioning as a registry of PEPPOL Participants and the BCP in which futher information may be found.
 |===
 
 
@@ -769,7 +791,8 @@ The Enhanced PEPPOL eDelivery network is built by combining a set of standardise
 
 The SML is a standard component of the well-established PEPPOL eDelivery network link:#ref-15[[15\]], who’s role is to manage the resource records of the participants and the SMPs (Service Metadata Publishers) in the DNS (Domain Name System).
 
-The SML is the only centralised component in the PEPPOL eDelivery network, and is currently operated by the EC unit DG DIGIT.
+The SML is the only centralised component in the PEPPOL eDelivery network.
+// , and is currently operated by the EC unit DG DIGIT.
 
 The Enhanced PEPPOL eDelivery network implies no changes to the PEPPOL SML service.
 
@@ -789,9 +812,9 @@ The key information elements exposed by the PEPPOL SMP for each PEPPOL Participa
 . Key information elements exposed by ELMA.
 image::images/smp-key-information.png[]
 
-=== Business Certificate Publisher
+=== Business Certificate Publisher (BCP)
 
-The Business Certificate Publisher link:#ref-32[[32\]] is a new component introduced with the Enhanced PEPPOL eDelivery network.
+The Business Certificate Publisher link:#ref-32[[32\]] is a new component introduced with the Enhanced PEPPOL eDelivery Network.
 
 The role of the Business Certificate Publisher (Certificate server) is to store the public key of a the encryption certificate for a receiver who wishes to receive encrypted documents. This makes it possible to introduce end-to-end security. The service offers retrieval of the public key when a valid combination of participant identifiers and business process are used for the lookup.
 
@@ -803,6 +826,15 @@ The key information elements exposed by the Business Certificate Publisher for e
 
 .Key information elements exposed by the Business Certificate Publisher.
 image::images/bcp-key-information.png[]
+
+
+=== Business Certificate Locator (BCL)
+
+The Business Certificate Locator link:#ref-32[[32\]] is a new component introduced with the Enhanced PEPPOL eDelivery Network.
+
+BCL is heavily influenced by PEPPOL SML. The main difference is use of REST where PEPPOL SML uses DNS.
+
+The role of the BCL is to discover the BCP used by a given PEPPEL Participant.
 
 
 === ASiC-E archive
