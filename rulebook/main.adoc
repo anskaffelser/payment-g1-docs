@@ -128,6 +128,10 @@ Adding information about BCL:
 * Added as role in messaging and transport domain (6).
 * Added information as part of Enhanced PEPPOL eDelivery (8.2.4).
 
+Metadata:
+
+* Updated definitions and clarifications in Metadata file (8.2.7).
+
 Other:
 
 * Removing information about who is hosting PEPPOL SML (6, 8.2.1).
@@ -888,9 +892,11 @@ The payload represents the actual business document, or more precisely the outer
 
 The metadata file is a new component introduced with the Enhanced PEPPOL eDelivery network.
 
-The function of the metadata file is to carry additional information about the ISO 20022-based financial message carried in the payload to facilitate correct internal routing and processing by the receiving PEPPOL Participants.
+The function of the metadata file is to carry additional information about the message carried in the payload to facilitate correct internal routing and processing by the receiving PEPPOL Participants.
 
-The actual content values to be included in the metadata file will be governed by the agreement between the customer and its banks. The metadata file may include the following information elements:
+The actual content values to be included in the metadata file will be governed by the agreement between the business partners. The default setup is that the metadata attributes are not in use. Meaning that a business partner can only be expected to act based on the content of any metadata attribute, if this has been agreed between the two business partners.
+
+The metadata file may include the following information elements:
 
 [cols="1,5,4", options="header"]
 |===
@@ -899,21 +905,22 @@ The actual content values to be included in the metadata file will be governed b
 | Representation
 
 | Customer ID
-| Bank specific identification of the customer, i.e. the Debtor or Creditor
+| Alternative Id of corner 1.
 | Alphanumeric 22 characters
 
 | Division
-| Division or subset for separating different file type
+| Division or subset for separating different file type. **Deprecated**
 | Numeric 3 characters
 
 | User ID
-| Bank specific identification of the user, operator or authorization used
+| An identifier of the party approving the message content.
 | Alphanumeric 22 characters
 |===
 
-* The identity of the customer, i.e. the Debtor or Creditor, as assigned by the bank;
-* The identity of the division of the Debtor/Creditor responsible for processing the ISO 20022-based Financial message;
-* The identity of the user authorised to issue an ISO 20022-based Financial message on behalf of the Debtor/Creditor.
+* Customer ID: An identifier of the sender (corner 1) of the Enhanced PEPPOL transmission. Typically, an identifier issued by the receiver, for instance a customer id.
+* Division: This element will be withdrawn from use.
+* User ID: An identifier of the message originator or the party approving the message content. This could be an account owner or a power of attorney. Especially when the message originator is different from the party operating Corner 1.
+
 
 === Acknowledgments and exception reporting
 
