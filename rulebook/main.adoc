@@ -131,8 +131,10 @@ Adding information about BCL:
 Other:
 
 * Removing information about who is hosting PEPPOL SML (6, 8.2.1).
+* Updated definition of "PEPPOL Participant" in Terms and abbreviations (1.3).
 
-| Erlend Klakegg Bergheim
+| Erlend Klakegg Bergheim +
+Lars Fixdal
 |===
 
 
@@ -329,7 +331,7 @@ Provides overall governance for the PEPPOL eDelivery network.
 PEPPOL:: Pan-European Public Procurement Online
 PEPPOL Authority:: An organisation assigned the responsibility to provide governance for the implementation and use of PEPPOL within a defined domain +
 http://peppol.eu/who-is-who/peppol-authorities/?rel=tab256
-PEPPOL Participant:: In this document: An organization using the Enhanced PEPPOL eDelivery network to send and receive Business Documents. +
+PEPPOL Participant:: In this document: An organization adressable in the Enhanced PEPPOL eDelivery network for sending and receiving Business Documents, directly or indirectly through relaying parties. +
 In OpenPEPPOL Transport Infrastructure Agreement: An organization, Contracting Authority or Economic Operator, using the PEPPOL Transport Infrastructure for exchange of Business Documents.
 PKI:: Public Key Infrastructure
 PPID:: PEPPOL Participant ID
