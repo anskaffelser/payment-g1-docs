@@ -11,9 +11,25 @@ Bits AS
 :sectnums:
 
 
-== Introduction
+== Background
 
-_TBA. Replaces ToC chapter in original document._
+The Norwegian banks are in the process of implementing ISO 20022-based messages for handling of payments, such as payment instructions from customers or notifications sent to customers. This development implies an introduction of ISO 20022-based messages in the bank-customer interface and a gradual phase-out of the currently established formats. As part of this implementation there have also been a growing recognition for improvements to the communication infrastructures used. It is recognized that any future communication infrastructure used in the bank-customer interface need to build upon infrastructures and standards commonly accepted in the market and provide the technical and legal security required for this type of business transactions.
+
+The PEPPOL eDelivery network is widely used for exchange of invoices and credit notes in EHF and PEPPOL BIS formats in the Norwegian market. It is also used for exchange of product catalogues and orders in the same formats. A clear majority of the public sector, most banks and more than 65.000 private sector entities can receive documents through the network, and in 2016 more than 35 million invoices was exchanged. More than 50 service providers offer connectivity to the PEPPOL eDelivery network through access points, and more than 60 service providers offer solutions to issue or receive EHF or PEPPOL BIS business documents. From 2017, an enhanced version of the PEPPOL eDelivery network will be used for submission of tenders in public procurement.
+
+Both banks and ERP vendors, as well as their customers, have a need for one common solution for transport of ISO 20022-based messages. By using a common eDelivery solution for handling ISO 20022-based messages banks, ERP vendors and their customers need only to connect to the infrastructure once to serve the entire market.
+
+This document sets out the Bits’ security requirements all parties using any transport infrastructure will have to adhere to, in order to be allowed access to the network for transfer of payment information.
+
+Initially the infrastructure used is Enhanced PEPPOL. Therefore, Enhanced PEPPOL is referred to throughout.
+
+This document will have to be revised annually or if there are major changes, such as the document being applied to a different transport infrastructure.
+
+
+=== Available software
+
+For easy adaption, software may be downloaded from https://www.github.com/difi.
+Github contains a library for formatting data and crypto based security functions, as well as access point software.
 
 
 == Document Information
@@ -79,6 +95,11 @@ Annex 2 added
 | 0.91b
 | Non-material changes in formating when switching to Asciidoctor.
 | 13.10.2017
+| E. K. Bergheim
+
+| TBA
+| Moving "3. Background" to "1. Background". Adding "3. Migration" and "6. Technical standards".
+| TBA
 | E. K. Bergheim
 |===
 
@@ -220,25 +241,18 @@ These requirements are limited to security requirements. Requirements concerning
 All references to PEPPOL in this document refers to the Enhanced PEPPOL eDelivery Network.
 
 
-== Background
+== Migrations
 
-The Norwegian banks are in the process of implementing ISO 20022-based messages for handling of payments, such as payment instructions from customers or notifications sent to customers. This development implies an introduction of ISO 20022-based messages in the bank-customer interface and a gradual phase-out of the currently established formats. As part of this implementation there have also been a growing recognition for improvements to the communication infrastructures used. It is recognized that any future communication infrastructure used in the bank-customer interface need to build upon infrastructures and standards commonly accepted in the market and provide the technical and legal security required for this type of business transactions.
+[cols="4,1,1", options="header"]
+|===
+| Part
+| Deadline receiver
+| Deadline sender
 
-The PEPPOL eDelivery network is widely used for exchange of invoices and credit notes in EHF and PEPPOL BIS formats in the Norwegian market. It is also used for exchange of product catalogues and orders in the same formats. A clear majority of the public sector, most banks and more than 65.000 private sector entities can receive documents through the network, and in 2016 more than 35 million invoices was exchanged. More than 50 service providers offer connectivity to the PEPPOL eDelivery network through access points, and more than 60 service providers offer solutions to issue or receive EHF or PEPPOL BIS business documents. From 2017, an enhanced version of the PEPPOL eDelivery network will be used for submission of tenders in public procurement.
-
-Both banks and ERP vendors, as well as their customers, have a need for one common solution for transport of ISO 20022-based messages. By using a common eDelivery solution for handling ISO 20022-based messages banks, ERP vendors and their customers need only to connect to the infrastructure once to serve the entire market.
-
-This document sets out the Bits’ security requirements all parties using any transport infrastructure will have to adhere to, in order to be allowed access to the network for transfer of payment information.
-
-Initially the infrastructure used is Enhanced PEPPOL. Therefore, Enhanced PEPPOL is referred to throughout.
-
-This document will have to be revised annually or if there are major changes, such as the document being applied to a different transport infrastructure.
-
-
-=== Available software
-
-For easy adaption, software may be downloaded from https://www.github.com/difi.
-Github contains a library for formatting data and crypto based security functions, as well as access point software.
+| 6. Technical Standards
+| 2020-09-15
+| 2020-10-15
+|===
 
 
 == Valid RC4b response codes from C4
@@ -567,6 +581,45 @@ BCP is a shared certificate server for storage of public certificates. It will s
 | 5.8.8
 | R
 | Validation information from Trust anchor should not be cached for a longer time period than 1 hour
+|===
+
+
+== Technical standards
+
+
+=== Signing
+
+[cols="1,1,6", options="header"]
+|===
+| #
+| Status
+| Requirement
+
+| 6.1.1
+| M*
+| Hashing: SHA-256
+|===
+
+
+=== Encryption
+
+[cols="1,1,6", options="header"]
+|===
+| #
+| Status
+| Requirement
+
+| 6.2.1
+| M*
+| Hashing: SHA-256
+
+| 6.2.2
+| M*
+| Signature Scheme: Probabilistic Signature Scheme (PSS)
+
+| 6.2.3
+| M*
+| Encryption: AES256-GCM
 |===
 
 

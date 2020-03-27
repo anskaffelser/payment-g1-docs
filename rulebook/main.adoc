@@ -710,9 +710,9 @@ A feasibility study issued by the Norwegian banks identifies the basic requireme
 
 The document defines requirements to be observed by all actors involved in the process.
 
-IMPORTANT: PEPPOL Participants and PEPPOL AP Providers shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
+IMPORTANT: PEPPOL Participants and PEPPOL AP Providers shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
 
-IMPORTANT: The provider of the Business Certificate Pubiser service shall ensure that the services they implement and operate are in conformance to the security requireents defined in link:#ref-12[[12\]].
+IMPORTANT: The provider of the Business Certificate Pubiser service shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
 
 
 == Validation of business transactions
