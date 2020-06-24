@@ -1,7 +1,0 @@
-sudo: required
-
-services:
-  - docker
-
-script:
-  - docker run -it -v $(pwd):/documents difi/asciidoctor

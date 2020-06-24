@@ -1,0 +1,22 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Build
+        run: make build
+
+      - name: Deploy
+        env:
+          DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push
+
