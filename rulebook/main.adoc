@@ -1,7 +1,7 @@
 = Rulebook
 Bits AS
 v1.1.0 SNAPSHOT
-:description: Enhanced PEPPOL eDelivery as communication infrastructure for financial messages in ISO 20022
+:description: Enhanced Peppol eDelivery as communication infrastructure for financial messages in ISO 20022
 :doctype: book
 :icons: font
 :toc: left
@@ -11,10 +11,6 @@ v1.1.0 SNAPSHOT
 :sectnums:
 
 {description}
-
-Author:: Jostein Frømyr
-Date:: 23. October 2018
-Status:: Draft for use in PoC
 
 
 :leveloffset: +1
@@ -103,12 +99,12 @@ a| Updated based on comments from PoC. Besides some minor editorial corrections,
 a| Updated based on comments from PoC and work related to onboarding. Besides some minor editorial corrections, the following issues has been addressed in this version:
 
 * Added source for [23] and [24] (section 1.2)
-* Re-phrased the definition of PEPPOL Participant (section 1.3 and 6)
+* Re-phrased the definition of Peppol Participant (section 1.3 and 6)
 * Updates to the governance procedures (section 1.5)
 * Clarification regarding use of bank certificates (new section 7.1)
 * Clarification regarding the use of RC4 and RC4b (section 8.2.7)
 * Clarification on how different certificates are carried in the ASiC-E archives (new section 8.3.1)
-* Updates to reflect recent agreements related to the PEPPOL Agreement Framework (section 9.3)
+* Updates to reflect recent agreements related to the Peppol Agreement Framework (section 9.3)
 | Jostein Frømyr
 
 | 29.09.2018
@@ -116,17 +112,16 @@ a| Updated based on comments from PoC and work related to onboarding. Besides so
 | Bi-weekly collaboration meeting decides to elevate version 0.95 to version 1.0.0.
 |
 
-| XX.XX.2019
+| XX.XX.2021
 | 1.1.0
-a| Updates related to BCP:
+a| Updates related to CertPub:
 
-* Updating link to BCP documentation (1.2).
-
-Adding information about BCL:
-
-* Added to list of terms and abbreviations (1.3).
-* Added as role in messaging and transport domain (6).
-* Added information as part of Enhanced PEPPOL eDelivery (8.2.4).
+* Updating link to CertPub documentation (1.2).
+* Removing "BCP" from list of terms and abbreviations (1.3).
+* Added CertPub Locator as role in messaging and transport domain (6).
+* Updating CertPub Publisher information (8.2.3).
+* Added CertPub Locator information (8.2.4).
+* Updated references to Business Certificate Publisher (BCP) to CertPub, CertPub Publisher, CertPub services.
 
 Metadata:
 
@@ -135,8 +130,12 @@ Metadata:
 
 Other:
 
-* Removing information about who is hosting PEPPOL SML (6, 8.2.1).
-* Updated definition of "PEPPOL Participant" in Terms and abbreviations (1.3).
+* Removing information about who is hosting Peppol SML (6, 8.2.1).
+* Updated definition of "Peppol Participant" in Terms and abbreviations (1.3).
+* Updated links formerly pointing to difi.no (1.2).
+* Updated references to Difi.
+* Removing references to AS2 (1.2).
+* Removing information regarding SREST (8.4.2).
 
 | Erlend Klakegg Bergheim +
 Lars Fixdal
@@ -154,8 +153,8 @@ This section lists documents referred to in the Rulebook. The convention used th
 | Issued by
 
 | [1] [[ref-01]]
-| RFC 2119: Key words for use in RCCs to Indicate Requirement Levels +
-http://www.rfc-base.org/rfc-2119.html
+| RFC 2119: Key words for use in RFCs to Indicate Requirement Levels +
+https://tools.ietf.org/html/rfc2119
 |
 
 | [2] [[ref-02]]
@@ -168,60 +167,55 @@ http://pubs.opengroup.org/architecture/togaf9-doc/arch/chap48.html
 https://link.springer.com/chapter/10.1007/BFb0055717
 |
 
-3+h| References related to PEPPOL eDelivery
+3+h| References related to Peppol eDelivery
 
 | [5] [[ref-05]]
-| How to become a member of OpenPEPPOL +
-http://peppol.eu/get-involved/join-openpeppol/?rel=tab119
-| OpenPEPPOL
+| How to become a member of OpenPeppol +
+http://peppol.eu/get-involved/join-openPeppol/
+| OpenPeppol
 
 | [6] [[ref-06]]
-| PEPPOL Transport Infrastructure Agreements in Norway – Access Point Provider Agreement +
-https://www.anskaffelser.no/verktoy/avtaler-mellom-difi-og-aksesspunkt (Partly in Norwegian only)
-| Difi
+| Peppol Transport Infrastructure Agreements in Norway – Access Point Provider Agreement +
+https://www.anskaffelser.no/verktoy/kontrakter-og-avtaler/avtalar-mellom-dfo-og-peppol-service-providers-i-noreg-aksesspunkt-og-service-metadata-providers (Partly in Norwegian only)
+| DFØ
 
 | [7] [[ref-7]]
-| How to become a PEPPOL access point +
-https://www.anskaffelser.no/ehf-infrastruktur-kontraktsoppfolging/aksesspunkt/hvordan-bli-et-aksesspunkt (Norwegian only)
-| Difi
+| How to become a Peppol access point +
+https://www.anskaffelser.no/verktoy/veiledere/aksesspunkt (Norwegian only)
+| DFØ
 
 | [8] [[ref-8]]
-| How to become a PEPPOL access point – acceptance testing +
-https://vefa.difi.no/peppol/knowledge-base/acceptance-test/
-| Difi
-
-| [9] [[ref-9]]
-| How to become a PEPPOL access point – Governance model +
-https://vefa.difi.no/peppol/knowledge-base/governance-model/
-| Difi
+| How to become a Peppol access point – acceptance testing +
+https://peppol.eu/wp-content/uploads/2018/11/Peppol-Testbed-and-Onboarding_v1p0.pdf
+| OpenPeppol
 
 | [10] [[ref-10]]
-| Oxalis – an open source implementation of a PEPPOL access point service +
-https://vefa.difi.no/peppol/tools/oxalis/
-| Difi
+| Oxalis – an open source implementation of a Peppol access point service +
+https://github.com/OxalisCommunity/oxalis
+| Oxalis Community
 
 | [24] [[ref-24]]
-| OpenPEPPOL – Migration Policy +
-https://joinup.ec.europa.eu/svn/peppol/LifecycleManagement/ReleaseManagement/
-| OpenPEPPOL
+| OpenPeppol – Migration Policy +
+https://joinup.ec.europa.eu/svn/Peppol/LifecycleManagement/ReleaseManagement/
+| OpenPeppol
 
 | [15] [[ref-15]]
-| OpenPEPPOL SML
+| OpenPeppol SML
 ICT-Transport-SML_Service_Specification-101.pdf +
-https://joinup.ec.europa.eu/svn/peppol/PEPPOL_EIA/1-ICT_Architecture/1-ICT-Transport_Infrastructure/13-ICT-Models/ICT-Transport-SML_Service_Specification-101.pdf
-| OpenPEPPOL
+https://peppol.eu/downloads/the-Peppol-edelivery-network-specifications/
+| OpenPeppol
 
 | [16] [[ref-16]]
-| OpenPEPPOL SMP
-ICT-Transport-SMP_Service_Specification-101.pdf +
-https://joinup.ec.europa.eu/svn/peppol/PEPPOL_EIA/1-ICT_Architecture/1-ICT-Transport_Infrastructure/13-ICT-Models/ICT-Transport-SMP_Service_Specification-110.pdf
-| OpenPEPPOL
+| OpenPeppol SMP
+ICT-Transport-SMP_Service_Specification-110.pdf +
+https://peppol.eu/downloads/the-Peppol-edelivery-network-specifications/
+| OpenPeppol
 
 | [21] [[ref-21]]
-| OpenPEPPOL SBDH
-ICT-Transport-OpenPEPPOL-Envelope_Specification-100-2014-01-15.pdf +
-http://peppol.eu/downloads/?rel=tab87
-|
+| OpenPeppol SBDH
+Peppol-EDN-Business-Message-Envelope-1.2-2019-02-01.pdf +
+https://peppol.eu/downloads/the-Peppol-edelivery-network-specifications/
+| OpenPeppol
 
 3+h| References related to the use of ISO 20022-based financial messages
 
@@ -232,7 +226,7 @@ https://www.bits-standards.org (Login required)
 
 | [12] [[ref-12]]
 | Security requirements for secure file transactions, version 0.7 (12 June 2017) +
-https://test-vefa.difi.no/iso20022/doc/security/
+https://anskaffelser.dev/payment/g1/docs/current/security/
 | Bits
 
 | [11] [[ref-11]]
@@ -245,84 +239,80 @@ https://www.iso20022.org/payments_messages.page
 Available on request post@bits.no
 | Bits
 
-3+h| Source specifications related to Enhanced PEPPOL eDelivery
+3+h| Source specifications related to Enhanced Peppol eDelivery
 
 | [13] [[ref-13]]
-| Use of Enhanced PEPPOL eDelivery network for ISO 20022 +
-https://vefa.difi.no/iso20022/standard/peppol/
+| Use of Enhanced Peppol eDelivery network for ISO 20022 +
+https://vefa.difi.no/iso20022/standard/Peppol/
 | Difi
 
 | [14] [[ref-14]]
-| Service level requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network +
-https://test-vefa.difi.no/iso20022/doc/requirements-ap/
-| Difi
+| Service level requirements for providers of Peppol Access Points services in the Enhanced Peppol eDelivery network +
+https://anskaffelser.dev/payment/g1/docs/current/requirements-ap/
+| DFØ
 
 | [18] [[ref-18]]
-| Specification of ASiC-E used in the Enhanced PEPPOL eDelivery network +
+| Specification of ASiC-E used in the Enhanced Peppol eDelivery network +
 http://wiki.ds.unipi.gr/display/ESENS/PR+-+eSENS+Container
 | eSENS
 
 | [20] [[ref-20]]
-| Specification of REM evidence used in the Enhanced PEPPOL eDelivery network +
+| Specification of REM evidence used in the Enhanced Peppol eDelivery network +
 http://wiki.ds.unipi.gr/display/ESENS/PR+-+REM
 | eSENS
 
 | [24] [[ref-24]]
 | Release management +
-https://test-vefa.difi.no/iso20022/doc/release-management/
-|
+https://anskaffelser.dev/payment/g1/docs/current/release-management/
+| DFØ
 
 | [26] [[ref-26]]
 | Process IDs: +
- https://test-vefa.difi.no/iso20022/doc/processes/#_processes
+ https://anskaffelser.dev/payment/g1/docs/current/processes/#_processes
 Document IDs: +
-https://test-vefa.difi.no/iso20022/doc/processes/ - _document_types
-| Difi
+https://anskaffelser.dev/payment/g1/docs/current/processes/#_document_types
+| DFØ
 
 | [27] [[ref-27]]
-| Specification of the Metadata document used in the Enhanced PEPPOL eDelivery network +
-https://github.com/difi/iso20022-package/blob/master/steps/step_2.adoc
-| Difi
+| Specification of the Metadata document used in the Enhanced Peppol eDelivery network +
+https://github.com/anskaffelser/payment-g1-package/blob/master/steps/step_2.adoc
+| DFØ
 
 | [28] [[ref-28]]
 | Specification of the Reception Acknowledgement Message (RC4) +
-https://github.com/difi/iso20022-extras/blob/master/doc/ReceptionAcknowledgement.adoc
-| Difi
+https://github.com/anskaffelser/payment-g1-extras/blob/master/doc/ReceptionAcknowledgement.adoc
+| DFØ
 
 | [29] [[ref-29]]
 | Specification of the Handling Exception (RC4b) +
-https://github.com/difi/iso20022-extras/blob/master/doc/HandlingException.adoc
-| Difi
+https://github.com/anskaffelser/payment-g1-extras/blob/master/doc/HandlingException.adoc
+| DFØ
 
 | [31] [[ref-31]]
 | Packaging of ISO 20022 financial documents +
-https://github.com/difi/iso20022-package/blob/master/README.adoc
-| Difi
+https://github.com/anskaffelser/payment-g1-package/blob/master/README.adoc
+| DFØ
 
 | [32] [[ref-32]]
-| Specifications related to Business Certificate Publisher (BCP) +
-https://vefa.difi.no/bcp/
-| Difi
+| Specifications related to CertPub +
+https://certpub.com/
+| CertPub
 |===
 
 
 == Terms and abbreviations
 
 Ack:: Acknowledgment
-AP:: PEPPOL access point. +
-A component providing access to the PEPPOL eDelivery network.
-AS2:: Applicability Statement 2. +
-The basic communication protocol used in the PEPPOL eDelivery network.
+AP:: Peppol access point. +
+A component providing access to the Peppol eDelivery network.
 ASiC-E:: Associated Signature Containers – extended
-BCL:: Business Certificate Locator
-BCP:: Business Certificate Publisher
 Business transaction:: The logical business content being exchanged between two business partners. Represented in an ISO 20022-based financial message.
 CEF:: Connecting European Facility
 CGI MP:: Common Global Implementation – Market Practice
 DSI:: Digital Service Infrastructure
 DNS:: Domain Name System
 ELMA:: Elektronisk motakteradresseregister +
-The PEPPOL SMP service used in the Norwegian market
+The Peppol SMP service used in the Norwegian market
 ERP:: Enterprise Resource Planning
 ETSI:: European Telecommunications Standards Institute
 File exchange:: The physical data-file moving “on the wire”.
@@ -331,25 +321,25 @@ ISO 20022:: An ISO standard for electronic data interchange between financial in
 MDN:: Message Disposition Notification
 MIC:: Message Integrity Check
 Nac:: Negative acknowledgment
-OpenPEPPOL:: A non-profit international association under Belgian law (AISBL).
-Provides overall governance for the PEPPOL eDelivery network.
-PEPPOL:: Pan-European Public Procurement Online
-PEPPOL Authority:: An organisation assigned the responsibility to provide governance for the implementation and use of PEPPOL within a defined domain +
-http://peppol.eu/who-is-who/peppol-authorities/?rel=tab256
-PEPPOL Participant:: In this document: An organization adressable in the Enhanced PEPPOL eDelivery network for sending and receiving Business Documents, directly or indirectly through relaying parties. +
-In OpenPEPPOL Transport Infrastructure Agreement: An organization, Contracting Authority or Economic Operator, using the PEPPOL Transport Infrastructure for exchange of Business Documents.
+OpenPeppol:: A non-profit international association under Belgian law (AISBL).
+Provides overall governance for the Peppol eDelivery network.
+Peppol:: Pan-European Public Procurement Online
+Peppol Authority:: An organisation assigned the responsibility to provide governance for the implementation and use of Peppol within a defined domain +
+http://peppol.eu/who-is-who/Peppol-authorities/
+Peppol Participant:: In this document: An organization adressable in the Enhanced Peppol eDelivery network for sending and receiving Business Documents, directly or indirectly through relaying parties. +
+In OpenPeppol Transport Infrastructure Agreement: An organization, Contracting Authority or Economic Operator, using the Peppol Transport Infrastructure for exchange of Business Documents.
 PKI:: Public Key Infrastructure
-PPID:: PEPPOL Participant ID
+PPID:: Peppol Participant ID
 RC4:: Reception Acknowledgement Message
 RC4b:: Exception Handling
 REM:: Registered Electronic Mail
 SBD:: Standard Business Document
 SBDH:: Standard Business Document Header
 SLA:: Service Level Agreement
-SML:: PEPPOL Service Metadata Locator. +
-A central component of the PEPPOL eDelivery network providing information on where to find information about a given PEPPOL Participant (registry).
-SMP:: PEPPOL Service Metadata Publisher. +
-A distributed component of the PEPPOL eDelivery network providing detailed information about the receive capabilities for a given PEPPOL Participant (repository).
+SML:: Peppol Service Metadata Locator. +
+A central component of the Peppol eDelivery network providing information on where to find information about a given Peppol Participant (registry).
+SMP:: Peppol Service Metadata Publisher. +
+A distributed component of the Peppol eDelivery network providing detailed information about the receive capabilities for a given Peppol Participant (repository).
 TLS:: Transport Layer Security
 XML:: Extensible Mark-up Language
 
@@ -362,7 +352,7 @@ The keywords “comply” and “conform” are used as described in link:#ref-0
 
 
 == Actors involved in the governance of this document
-The following actors will collaboratively provide governance for the main elements involved in the solution for the use of Enhanced PEPPOL eDelivery for transport of ISO 20022-based financial messages:
+The following actors will collaboratively provide governance for the main elements involved in the solution for the use of Enhanced Peppol eDelivery for transport of ISO 20022-based financial messages:
 
 [cols="1,5", options="header"]
 |===
@@ -372,36 +362,36 @@ The following actors will collaboratively provide governance for the main elemen
 h| Bits
 | This Rulebook
 
-h| Bits and Difi
+h| Bits and DFØ
 | ISO 20022-based financial messages and their use to support file-based payments
 
-h| Difi and Difi
-| Technical specifications relevant for Enhanced PEPPOL eDelivery
+h| Bits and DFØ
+| Technical specifications relevant for Enhanced Peppol eDelivery
 
-h| Difi
-| Certification of PEPPOL AP Providers
+h| DFØ
+| Certification of Peppol AP Providers
 
-h| Difi
-| The PEPPOL SMP service for use in the Norwegian market (ELMA)
+h| DigDir
+| The Peppol SMP service for use in the Norwegian market (ELMA)
 |===
 
-The specifications for use of the ISO 2022-based financial messages are governed by Bits according to the procedures outlined in link:#ref-23[[23\]]. The key principles of this procedure are:
+The specifications for use of the ISO 20022-based financial messages are governed by Bits according to the procedures outlined in link:#ref-23[[23\]]. The key principles of this procedure are:
 
-* New versions of specifications will be developed in an open and transparent manner in consultation with the banks, Difi and other key stakeholders;
+* New versions of specifications will be developed in an open and transparent manner in consultation with the banks, DFØ and other key stakeholders;
 * All Bits Guidelines shall be compliant to the relevant ISO 20022 specification and any MP Guidelines;
 * Specifications will be maintained on an annual basis based on changes in the base specifications and requests received from the market;
 * It is expected that 3-4 versions of a specification will be available for use by the market at any given point in time.
 
-The rulebook and the specifications related to the Enhanced PEPPOL eDelivery network will be governed by a corporation between Bits and Difi in accordance with the procedures outlined in link:#ref-24[[24\]]. The key principles of these procedure are:
+The rulebook and the specifications related to the Enhanced Peppol eDelivery network will be governed by a corporation between Bits and DFØ in accordance with the procedures outlined in link:#ref-24[[24\]]. The key principles of these procedure are:
 
 * New versions of specifications and components will be developed in an open and transparent manner in consultation with the involved stakeholders;
 * To allow a smooth and friction free transition, two versions of the element subject to maintenance must be allowed;
-* To ensure non‐disrupted operations and full interoperability of the messages exchanged in the PEPPOL network, the period during which two parallel versions are allowed should be as short as possible;
-* Any changes affecting the current (mandatory) PEPPOL element should be notified, communicated and agreed upon a minimum of 6 months in advance;
+* To ensure non‐disrupted operations and full interoperability of the messages exchanged in the Peppol network, the period during which two parallel versions are allowed should be as short as possible;
+* Any changes affecting the current (mandatory) Peppol element should be notified, communicated and agreed upon a minimum of 6 months in advance;
 * The migration is conducted in three steps at three different points in time
 ** Phase in: date at which the new/updated element is introduced as an optional element.
 ** Transition: the date at which the new/updated element replaces the current element as the mandatory element. The previously mandatory element becomes optional.
-** Phase out: the date after which the old element is no longer supported in the PEPPOL network.
+** Phase out: the date after which the old element is no longer supported in the Peppol network.
 
 
 = Vision and Objectives
@@ -411,25 +401,25 @@ The rulebook and the specifications related to the Enhanced PEPPOL eDelivery net
 
 The Norwegian banks are in the process of implementing ISO 20022-based messages for handling of payments, such as payment instructions from customers or notifications sent to customers. This development implies an introduction of ISO 20022-based massages in the bank-customer interface and a gradual phase-out of the currently established formats. As part of this implementation there have also been a growing recognition for improvements to the communication infrastructures used. It is recognised that any future communication infrastructure used in the bank-customer interface need to build upon infrastructures and standards commonly accepted in the market and provide the technical and legal security required for this type of business transactions.
 
-The PEPPOL eDelivery network, currently used by some 90.000 private and public entities being serviced by more than 50 access points and exchanging more than 35 million business documents in 2016, represents such an infrastructure.
+The Peppol eDelivery network, currently used by some 90.000 private and public entities being serviced by more than 50 access points and exchanging more than 35 million business documents in 2016, represents such an infrastructure.
 
-The vision of this initiative is to introduce an enhanced version of the PEPPOL eDelivery network as the common solution for transport of ISO 20022-based financial messages.
+The vision of this initiative is to introduce an enhanced version of the Peppol eDelivery network as the common solution for transport of ISO 20022-based financial messages.
 
 === Success criteria
 
 The initiative is considered a success when:
 
-* A customer using the Enhanced PEPPOL eDelivery network can switch bank without making changes to its technical infrastructure.
-* A customer using the Enhanced PEPPOL eDelivery network can change PEPPOL access point provider without having to make changes to its business application.
-* The Enhanced PEPPOL eDelivery for secure file transfer of ISO 20022-based financial messages can be used by all private and public entities in the Norwegian market without any changes or additions.
-* The Enhanced PEPPOL eDelivery for secure file transfer of ISO 20022-based financial messages can be used outside Norway without any changes or additions.
+* A customer using the Enhanced Peppol eDelivery network can switch bank without making changes to its technical infrastructure.
+* A customer using the Enhanced Peppol eDelivery network can change Peppol access point provider without having to make changes to its business application.
+* The Enhanced Peppol eDelivery for secure file transfer of ISO 20022-based financial messages can be used by all private and public entities in the Norwegian market without any changes or additions.
+* The Enhanced Peppol eDelivery for secure file transfer of ISO 20022-based financial messages can be used outside Norway without any changes or additions.
 * This rulebook and its associated standards and specifications can be sent to an external software developer who can build a solution which is interoperable with other existing solutions.
 * Readers understands the rulebook and find all information they need in the rulebook, its attachments and referred documents.
 
 
 == Objectives
 
-The objective of this rulebook is to identify and describe the rules, principles and requirements, for the use of the Enhanced PEPPOL eDelivery for transport of ISO 20022-based financial messages between the banks and their customers in the Norwegian market. To achieve this the rulebook makes extensive use of references to technical specifications providing the detailed normative technical content as illustrated below.
+The objective of this rulebook is to identify and describe the rules, principles and requirements, for the use of the Enhanced Peppol eDelivery for transport of ISO 20022-based financial messages between the banks and their customers in the Norwegian market. To achieve this the rulebook makes extensive use of references to technical specifications providing the detailed normative technical content as illustrated below.
 
 image::images/objectives.png[]
 
@@ -441,7 +431,7 @@ Although this rulebook is aimed at the Norwegian market, it is expected that the
 The rules, principles and guidelines identified and described in this document are considered as binding for:
 
 * Service providers, i.e. ERP and AP providers, whose solutions and services have been accredited as compliant, and
-* banks and their customers registered as receivers of ISO 20022-based messages in a PEPPOL SMP or acting as sender of such messages.
+* banks and their customers registered as receivers of ISO 20022-based messages in a Peppol SMP or acting as sender of such messages.
 
 Any party claiming compliance to the rules, principles and requirements identified and described in this document may implement additional features in their solutions provided that these additional features do not violate or contradict the rules, principles and requirements described.
 
@@ -450,7 +440,7 @@ Any party claiming compliance to the rules, principles and requirements identifi
 
 
 == Description of scope
-The scope of this rulebook is to identify and describe relevant rules, principles and requirements for the use of the Enhanced PEPPOL eDelivery for transport of ISO 20022-based financial messages between the banks and their customers, including
+The scope of this rulebook is to identify and describe relevant rules, principles and requirements for the use of the Enhanced Peppol eDelivery for transport of ISO 20022-based financial messages between the banks and their customers, including
 
 * the services and service levels (SLA) to be provided by banks, customers and their service providers;
 * the technical content of, and relationship between, services provided. The rulebook will however not in itself define the actual technical specifications other than by reference;
@@ -464,11 +454,11 @@ The below figure serves to illustrate the scope of this document.
 .Scope of the Rulebook
 image::images/scope.png[]
 
-The *business level* is focused on the business agreement and use of file-based payment services (e.g. general payments, salary, etc.) between the customer and its bank. The business agreement should state that the parties will use Enhanced PEPPOL eDelivery, their responsibilities for connecting to an accredited PEPPOL Access Point as well as registration of the business documents they may receive in a PEPPOL SMP.
+The *business level* is focused on the business agreement and use of file-based payment services (e.g. general payments, salary, etc.) between the customer and its bank. The business agreement should state that the parties will use Enhanced Peppol eDelivery, their responsibilities for connecting to an accredited Peppol Access Point as well as registration of the business documents they may receive in a Peppol SMP.
 
-The *Application level* is focused on the use of ISO 20022-based financial messages, identification of the specifications relevant for the payment process (including what messages to use when, and how to handle errors and exceptions, the syntax to use and what information to place where in the files), identification of the requirements for securing the messages and service limitations (e.g. max. file size, timeouts, etc.) and the requirements for secured transfer of files between the bank, customer and their PEPPOL access points.
+The *Application level* is focused on the use of ISO 20022-based financial messages, identification of the specifications relevant for the payment process (including what messages to use when, and how to handle errors and exceptions, the syntax to use and what information to place where in the files), identification of the requirements for securing the messages and service limitations (e.g. max. file size, timeouts, etc.) and the requirements for secured transfer of files between the bank, customer and their Peppol access points.
 
-The *messaging and transport level* is focused on the agreements and technical specifications for how to interface and interact with the Enhanced PEPPOL eDelivery network as well as the services and service levels to be observed by the actors involved in this infrastructure.
+The *messaging and transport level* is focused on the agreements and technical specifications for how to interface and interact with the Enhanced Peppol eDelivery network as well as the services and service levels to be observed by the actors involved in this infrastructure.
 
 
 == Prerequisites
@@ -476,10 +466,10 @@ The *messaging and transport level* is focused on the agreements and technical s
 The following principles are considered as prerequisites for this document:
 
 * Each actor shall be free to choose an accredited service provider based on its own business requirements;
-* All actors involved in the Enhanced PEPPOL eDelivery network shall ensure that their implementation complies to all relevant specifications and agreements and has sufficient capacity to meet expectations;
+* All actors involved in the Enhanced Peppol eDelivery network shall ensure that their implementation complies to all relevant specifications and agreements and has sufficient capacity to meet expectations;
 * The ISO 20022-based financial messages exchanged shall be compliant to the relevant Message Implementation Guidelines;
-* The technical specifications applicable for the Enhanced PEPPOL eDelivery shall be fully conformant to the technical specifications maintained and approved by Difi;
-* The final set of agreements governing the use of the Enhanced PEPPOL eDelivery solution for transport of ISO 20022-based financial messages shall be positioned as an Application Domain Agreement and be in conformance to the results from the on-going revision of the OpenPEPPOL Transport Infrastructure Agreement.
+* The technical specifications applicable for the Enhanced Peppol eDelivery shall be fully conformant to the technical specifications maintained and approved by DFØ;
+* The final set of agreements governing the use of the Enhanced Peppol eDelivery solution for transport of ISO 20022-based financial messages shall be positioned as an Application Domain Agreement and be in conformance to the results from the on-going revision of the OpenPeppol Transport Infrastructure Agreement.
 
 
 = The business level
@@ -596,18 +586,18 @@ Account report
 | The Debtor/Creditor will receive a periodic report from its agent about transactions made on its account for reconciliation of general ledger and decision-/liquidity-systems.
 |===
 
-To support the implementation of these business scenarios in the Enhanced PEPPOL eDelivery network, a set of unique process and document identifiers has been developed and are available from link:ref-26[[26\]].
+To support the implementation of these business scenarios in the Enhanced Peppol eDelivery network, a set of unique process and document identifiers has been developed and are available from link:ref-26[[26\]].
 
 
 = The messaging and transport domain
 
-The PEPPOL eDelivery network is a combination of a four-corner message exchange model, discovery model (capability look-up), a PKI-based security model and a legal framework that enables the exchange of structured information through the internet, wrapped in a messaging envelope.
+The Peppol eDelivery network is a combination of a four-corner message exchange model, discovery model (capability look-up), a PKI-based security model and a legal framework that enables the exchange of structured information through the internet, wrapped in a messaging envelope.
 
-The PEPPOL eDelivery network, as currently used for e.g. electronic invoicing, was established to ensure secure and reliable messaging between PEPPOL Access Point services. To provide support for end-to-end security and reliable messaging required for the exchange of financial messages, as well as for electronic communication by the public procurement directives, an enhanced version of the PEPPOL eDelivery network has been established.
+The Peppol eDelivery network, as currently used for e.g. electronic invoicing, was established to ensure secure and reliable messaging between Peppol Access Point services. To provide support for end-to-end security and reliable messaging required for the exchange of financial messages, as well as for electronic communication by the public procurement directives, an enhanced version of the Peppol eDelivery network has been established.
 
-In the four-corner model, the back-end systems of end-users do not exchange data directly with each other, but transport data through Access Points. These Access Points (PEPPOL AP) are conformant to the same technical specifications and are therefore capable of communicating with each other.
+In the four-corner model, the back-end systems of end-users do not exchange data directly with each other, but transport data through Access Points. These Access Points (Peppol AP) are conformant to the same technical specifications and are therefore capable of communicating with each other.
 
-From a transport domain viewpoint, the actors involved in the exchange of ISO 20022-based financial messages are the sender and receiver of an ISO 20022-based financial message and their respective PEPPOL AP Providers as illustrated in Figure 3.
+From a transport domain viewpoint, the actors involved in the exchange of ISO 20022-based financial messages are the sender and receiver of an ISO 20022-based financial message and their respective Peppol AP Providers as illustrated in Figure 3.
 
 .The messaging and transport level four-corner model.
 image::images/tl-4cm.png[]
@@ -619,71 +609,69 @@ At the messaging and transport level the following roles are involved:
 | Role
 | Function
 
-h| PEPPOL Participant
-| A private or public entity using the Enhanced PEPPOL eDelivery network to send or receive Business Documents (i.e. an ISO 20022-based financial message).
+h| Peppol Participant
+| A private or public entity using the Enhanced Peppol eDelivery network to send or receive Business Documents (i.e. an ISO 20022-based financial message).
 
-A PEPPOL Participant can act in any of the business roles identified in point 4 above.
+A Peppol Participant can act in any of the business roles identified in point 4 above.
 
-h| PEPPOL AP Provider
-| An organization providing PEPPOL Access Point services as part of the PEPPOL Transport Infrastructure and thereby giving a PEPPOL Participant access to the PEPPOL eDelivery network.
+h| Peppol AP Provider
+| An organization providing Peppol Access Point services as part of the Peppol Transport Infrastructure and thereby giving a Peppol Participant access to the Peppol eDelivery network.
 
-(Further rules and guidance on how to become a PEPPOL AP provider is given in link:#ref-5[[5\]], link:#ref-6[[6\]], link:#ref-7[[7\]], link:#ref-8[[8\]] and link:#ref-9[[9\]]. An open source implementation of a PEPPOL AP service is given in link:#ref-10[[10\]].)
+(Further rules and guidance on how to become a Peppol AP provider is given in link:#ref-5[[5\]], link:#ref-6[[6\]], link:#ref-7[[7\]] and link:#ref-8[[8\]]. An open source implementation of a Peppol AP service is given in link:#ref-10[[10\]].)
 
-h| PEPPOL SMP
-| The PEPPOL SMP service is a repository of information about PEPPOL Participants and their capabilities to receive ISO 20022-based financial messages, as well as the PEPPOL AP Provider used.
+h| Peppol SMP
+| The Peppol SMP service is a repository of information about Peppol Participants and their capabilities to receive ISO 20022-based financial messages, as well as the Peppol AP Provider used.
 
-// ELMA is the centralised SMP service used In the Norwegian market provided by Difi.
+// ELMA is the centralised SMP service used In the Norwegian market provided by DirDir.
 
-h| PEPPOL SML
-| The PEPPOL SML service is a centralised component of the PEPPOL eDelivery network functioning as a registry of PEPPOL Participants and the SMP in which further information may be found.
+h| Peppol SML
+| The Peppol SML service is a centralised component of the Peppol eDelivery network functioning as a registry of Peppol Participants and the SMP in which further information may be found.
 
-// The PEPPOL SML is provided under contract by the EC unit DG DIGIT.
+// The Peppol SML is provided under contract by the EC unit DG DIGIT.
 
-h| Business Certificate Publisher
-| The Business Certificate Publisher is a component introduced for the Enhanced PEPPOL eDelivery network to store and make available qualified certificate upon lookup.
+h| CertPub Publisher
+| The CertPub Publisher is a component introduced to store and make available qualified certificate upon lookup.
 
-In the first phase, the Business Certificate Publisher will be hosted by DIFI as a central component. In the future, the PEPPOL SMP will be used to locate a PEPPOL Participants published certificate.
-
-h| Business Certificate Locator
-| The Business Certificate Publisher is a centralised component functioning as a registry of PEPPOL Participants and the BCP in which futher information may be found.
+h| CertPub Locator
+| The CertPub Locator is a centralised component functioning as a registry of Peppol Participants and the CertPub Publisher in which futher information may be found.
 |===
 
 
-== The role of the PEPPOL SMP
+== The role of the Peppol SMP
 
-Each PEPPOL Participant using the Enhanced PEPPOL eDelivery network need to be registered in a PEPPOL SMPfootnote:[The PEPPOL SMP service used in the Norwegian market is known as ELMA.]. The PEPPOL SMP is a service, or a repository, containing information about the identity of the PEPPOL Participant (the PEPPOL Participant ID), the type of financial messages it can receive (receive capabilities) and the PEPPOL AP to which the messages should be delivered.
+Each Peppol Participant using the Enhanced Peppol eDelivery network need to be registered in a Peppol SMPfootnote:[The Peppol SMP service used in the Norwegian market is known as ELMA.]. The Peppol SMP is a service, or a repository, containing information about the identity of the Peppol Participant (the Peppol Participant ID), the type of financial messages it can receive (receive capabilities) and the Peppol AP to which the messages should be delivered.
 
-The actual registration in the SMP will be done by the PEPPOL AP Provider.
+The actual registration in the SMP will be done by the Peppol AP Provider.
 
-IMPORTANT: The PEPPOL AP Provider shall register receive capabilities in an SMP for all PEPPOL Participants it services.
+IMPORTANT: The Peppol AP Provider shall register receive capabilities in an SMP for all Peppol Participants it services.
 
-As there is a close relationship and dependency in the use of ISO 20022-based financial messages in the different business processes as described in section 5 above, the SMP provider need to ensure that the PEPPOL Participants are registered with a formally issued PEPPOL Participant ID and a correct and consistent set of receive capabilities.
+As there is a close relationship and dependency in the use of ISO 20022-based financial messages in the different business processes as described in section 5 above, the SMP provider need to ensure that the Peppol Participants are registered with a formally issued Peppol Participant ID and a correct and consistent set of receive capabilities.
 
-IMPORTANT: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
+IMPORTANT: The provider of Peppol SMP services for ISO 20022-based financial messages shall have procedures in place to ensure that Peppol Participants are identified by an identifier that enables verification of the Peppol Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as Peppol Participant identifier.]
 
-IMPORTANT: The provider of PEPPOL SMP services for ISO 20022-based financial messages shall have functionality implemented to ensure that PEPPOL Participants are registered with a correct and consistent set of receive capabilities as per link:#ref-26[[26\]].
-
-
-== The role of a PEPPOL AP Provider
-
-A PEPPOL Participant, i.e. a sender or receiver of ISO 20022-based financial messages, will utilise a PEPPOL AP service to gain access to the Enhanced PEPPOL eDelivery Network. The provider of such services, the PEPPOL AP Provider, can be compared to the mailman in a traditional physical mail system. Analogue to this it follows that the PEPPOL AP Provider does not have any responsibility for the content inside of the envelope being handled. Due to the introduction of end-to-end security in the Enhanced PEPPOL eDelivery network, the PEPPOL AP Provider is not even capable of reading or processing the payload within the envelope.
-
-On the other hand, there is a requirement on the PEPPOL AP Providers participating in the Enhanced PEPPOL eDelivery network to offer services and service levels conformant to the stated requirements in link:#ref-14[[14\]]. This include a requirement on the PEPPOL AP provider to maintain an internal register of addresses suitable for routing of received messages and acknowledgements to the correct Debtor/Creditor.
-
-IMPORTANT: A PEPPOL AP Provider offering services in the Enhanced PEPPOL eDelivery network shall have its services accredited as conformant to the SLA requirements for providers of PEPPOL Access Points services in the Enhanced PEPPOL eDelivery network link:#ref-14[[14\]].
+IMPORTANT: The provider of Peppol SMP services for ISO 20022-based financial messages shall have functionality implemented to ensure that Peppol Participants are registered with a correct and consistent set of receive capabilities as per link:#ref-26[[26\]].
 
 
-== The role of the Business Certificate Publisher
+== The role of a Peppol AP Provider
 
-The role of the Business Certificate Publisher link:#ref-32[[32\]] is to store and make available qualified certificate upon lookup for a receiver who wishes to receive encrypted documents. This makes it possible to introduce end-to-end security. The service can retrieve qualified certificates when a valid combination of participant identifier and business process identifier are used for the lookup. Business processes are used to separate areas like payments and invoicing.
+A Peppol Participant, i.e. a sender or receiver of ISO 20022-based financial messages, will utilise a Peppol AP service to gain access to the Enhanced Peppol eDelivery Network. The provider of such services, the Peppol AP Provider, can be compared to the mailman in a traditional physical mail system. Analogue to this it follows that the Peppol AP Provider does not have any responsibility for the content inside of the envelope being handled. Due to the introduction of end-to-end security in the Enhanced Peppol eDelivery network, the Peppol AP Provider is not even capable of reading or processing the payload within the envelope.
 
-The Business Certificate Publisher thus fulfils the role as a qualified certificate publisher for secure messaging.
+On the other hand, there is a requirement on the Peppol AP Providers participating in the Enhanced Peppol eDelivery network to offer services and service levels conformant to the stated requirements in link:#ref-14[[14\]]. This include a requirement on the Peppol AP provider to maintain an internal register of addresses suitable for routing of received messages and acknowledgements to the correct Debtor/Creditor.
 
-IMPORTANT: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that PEPPOL Participants are identified by an identifier that enables verification of the PEPPOL Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as PEPPOL Participant identifier.]
+IMPORTANT: A Peppol AP Provider offering services in the Enhanced Peppol eDelivery network shall have its services accredited as conformant to the SLA requirements for providers of Peppol Access Points services in the Enhanced Peppol eDelivery network link:#ref-14[[14\]].
 
-IMPORTANT: The provider of Business Certificate Publisher services for ISO 20022-based financial messages shall have procedures in place to ensure that only certificates issued by a qualified certificate issuer are used.
 
-The Business Certificate Publisher can be realized as either a centralised or a distributed component in the enhanced PEPPOL eDelivery networkfootnote:[The first version of Business Certificate Publisher service will be hosted by Difi as a centralised service.], where PEPPOL Participants will have access to store their public keys used within a business process. In the future, it is expected that the SMP will be used to locate an organization’s published certificate, and thus facilitate a decentralised use.
+== The role of the CertPub services
+
+The role of the CertPub services link:#ref-32[[32\]] is to store and make available qualified certificate upon lookup for a receiver who wishes to receive encrypted documents. This makes it possible to introduce end-to-end security. The service can retrieve qualified certificates when a valid combination of participant identifier and business process identifier are used for the lookup. Business processes are used to separate areas like payments and invoicing.
+
+The CertPub services thus fulfils the role as a qualified certificate publisher for secure messaging.
+
+IMPORTANT: The provider of CertPub services for ISO 20022-based financial messages shall have procedures in place to ensure that Peppol Participants are identified by an identifier that enables verification of the Peppol Participant as a legally established entity.footnote:[Within the Norwegian SMP, ELMA, the legal company identifier (“organisasjonsnumer”) will be used as Peppol Participant identifier.]
+
+IMPORTANT: The provider of CertPub services for ISO 20022-based financial messages shall have procedures in place to ensure that only certificates issued by a qualified certificate issuer are used.
+
+CertPub is realized as a distributed component in the enhanced Peppol eDelivery network, where Peppol Participants will have access to store their qualified certificates used within a business process.
 
 
 = Key security, packaging and routing requirements
@@ -710,22 +698,22 @@ A feasibility study issued by the Norwegian banks identifies the basic requireme
 
 The document defines requirements to be observed by all actors involved in the process.
 
-IMPORTANT: PEPPOL Participants and PEPPOL AP Providers shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
+IMPORTANT: Peppol Participants and Peppol AP Providers shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
 
-IMPORTANT: The provider of the Business Certificate Pubiser service shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
+IMPORTANT: The provider of the CertPub Pubiser service shall ensure that the services they implement and operate are in conformance to the security requirements defined in link:#ref-12[[12\]].
 
 
 == Validation of business transactions
 
 Validation is used to ensure that the content of a message is technically correct and complies to its governing specification(s). This is typically done by validating an XML instance document against its governing XML Schema and/or by running a set of schematron rules to validate the actual content.
 
-IMPORTANT: The PEPPOL Participant acting in the role as sender of an ISO 20022-based financial messages shall ensure that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
+IMPORTANT: The Peppol Participant acting in the role as sender of an ISO 20022-based financial messages shall ensure that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
 
-IMPORTANT: The PEPPOL Participant acting in the role as receiver of an ISO 20022-based financial messages may validate that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
+IMPORTANT: The Peppol Participant acting in the role as receiver of an ISO 20022-based financial messages may validate that the content of the ISO 20022-based financial message is compliant to the appropriate specification in link:#ref-4[[4\]].
 
 IMPORTANT: If the receiver of an ISO 20022-based financial messages detects errors during validation or processing it shall advise the sender accordingly by return of an error message as specified in link:#ref-4[[4\]].
 
-IMPORTANT: The sending PEPPOL AP provider offering services in the Enhanced PEPPOL eDelivery network shall ensure that the file sent is compliant to all appropriate specification for the Enhanced PEPPOL eDelivery network.
+IMPORTANT: The sending Peppol AP provider offering services in the Enhanced Peppol eDelivery network shall ensure that the file sent is compliant to all appropriate specification for the Enhanced Peppol eDelivery network.
 
 
 == Packaging
@@ -737,7 +725,7 @@ IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that
 
 == Addressing
 
-To facilitate routing of the envelope between PEPPOL APs, even after its content is encrypted, there is also a need to carry the basic addressing information and information on the type of data carried in the envelope outside of the actual financial message itself. This is typically done using some form of a header that carries data about the business transaction carried in the envelope.
+To facilitate routing of the envelope between Peppol APs, even after its content is encrypted, there is also a need to carry the basic addressing information and information on the type of data carried in the envelope outside of the actual financial message itself. This is typically done using some form of a header that carries data about the business transaction carried in the envelope.
 
 IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that the required addressing information is available in compliance to link:#ref-21[[21\]].
 
@@ -753,106 +741,106 @@ IMPORTANT: The sender of an ISO 20022-based financial messages shall ensure that
 
 An audit trail is a chronological record, or set of records, that provide documentary evidence of the sequence of activities that have affected a message. In a process involving several actors and roles, an audit trail can be established by collecting acknowledgements generated at different steps in the process.
 
-IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall log all PEPPOL Business Documents/payloads that they send or receive.
+IMPORTANT: Peppol AP Providers offering services in the Enhanced Peppol eDelivery network shall log all Peppol Business Documents/payloads that they send or receive.
 
-IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall implement procedures to follow-up and initialte investigation if acknowledgments are not received.
+IMPORTANT: Peppol AP Providers offering services in the Enhanced Peppol eDelivery network shall implement procedures to follow-up and initialte investigation if acknowledgments are not received.
 
-IMPORTANT: In case of non-delivery, the PEPPOL AP Provider shall informn the PEPPOL Participant. The PEPPOL AP Provider shall not do a re-send of messages.
+IMPORTANT: In case of non-delivery, the Peppol AP Provider shall informn the Peppol Participant. The Peppol AP Provider shall not do a re-send of messages.
 
 In addition to the logging, which primarely is done for operational purposes, the acotrors are required to generate and store secure evidence of the documents exchanged.
 
-IMPORTANT: PEPPOL AP Providers offering services in the Enhanced PEPPOL eDelivery network shall generate and store REM evidence in compliance to link:#ref-20[[20\]] for the PEPPOL Business Documents/payloads they handle.
+IMPORTANT: Peppol AP Providers offering services in the Enhanced Peppol eDelivery network shall generate and store REM evidence in compliance to link:#ref-20[[20\]] for the Peppol Business Documents/payloads they handle.
 
 
-= Enhanced PEPPOL eDelivery
+= Enhanced Peppol eDelivery
 
 
-== PEPPOL eDelivery vs. Enhanced PEPPOL eDelivery
+== Peppol eDelivery vs. Enhanced Peppol eDelivery
 
 
-=== PEPPOL eDelivery
+=== Peppol eDelivery
 
-The PEPPOL eDelivery network as currently used for e.g. electronic invoicing, is a profile of the European Commission Connecting Europe Facility (CEF) eDelivery Digital Service Infrastructure (DSI), or a PEPPOL eDelivery for short.
+The Peppol eDelivery network as currently used for e.g. electronic invoicing, is a profile of the European Commission Connecting Europe Facility (CEF) eDelivery Digital Service Infrastructure (DSI), or a Peppol eDelivery for short.
 
-.PEPPOL eDelivery
-image::images/peppol-edelivery.png[]
+.Peppol eDelivery
+image::images/Peppol-edelivery.png[]
 
 
-=== The Enhanced PEPPOL eDelivery network
+=== The Enhanced Peppol eDelivery network
 
-To provide support for end-to-end security and reliable messaging, as well as increased service levels, required for electronic communication by the public procurement directives, an enhanced version of the PEPPOL eDelivery network has been established.
+To provide support for end-to-end security and reliable messaging, as well as increased service levels, required for electronic communication by the public procurement directives, an enhanced version of the Peppol eDelivery network has been established.
 
-The specifications for this enhanced version of the PEPPOL eDeiivery network were developed and tested as part of the e-SENS project as well as by Difi, and are expected to become a part of the PEPPOL eDelivery network specifications.
+The specifications for this enhanced version of the Peppol eDeiivery network were developed and tested as part of the e-SENS project as well as by DFØ, and are expected to become a part of the Peppol eDelivery network specifications.
 
-The main features of the Enhanced PEPPOL eDelivery network is that it supports a higher level of security, including encryption of documents and the ability to track and trace all messages sent throughout the network.
+The main features of the Enhanced Peppol eDelivery network is that it supports a higher level of security, including encryption of documents and the ability to track and trace all messages sent throughout the network.
 
-.Enhanced PEPPOL eDelivery
-image::images/enhanced-peppol-edelivery.png[]
+.Enhanced Peppol eDelivery
+image::images/enhanced-Peppol-edelivery.png[]
 
-== Building blocks of the Enhanced PEPPOL eDelivery network
+== Building blocks of the Enhanced Peppol eDelivery network
 
-The Enhanced PEPPOL eDelivery network is built by combining a set of standardised building blocks, some of which are available as open source software. The process of combining the components is elaborated in link:#ref-13[[13\]]. A short description of the different components (building blocks) of the Enhanced eDelivery network is given in the following sub-sections.
+The Enhanced Peppol eDelivery network is built by combining a set of standardised building blocks, some of which are available as open source software. The process of combining the components is elaborated in link:#ref-13[[13\]]. A short description of the different components (building blocks) of the Enhanced eDelivery network is given in the following sub-sections.
 
 
 === Service Metadata Locator (SML)
 
-The SML is a standard component of the well-established PEPPOL eDelivery network link:#ref-15[[15\]], who’s role is to manage the resource records of the participants and the SMPs (Service Metadata Publishers) in the DNS (Domain Name System).
+The SML is a standard component of the well-established Peppol eDelivery network link:#ref-15[[15\]], who’s role is to manage the resource records of the participants and the SMPs (Service Metadata Publishers) in the DNS (Domain Name System).
 
-The SML is the only centralised component in the PEPPOL eDelivery network.
+The SML is the only centralised component in the Peppol eDelivery network.
 // , and is currently operated by the EC unit DG DIGIT.
 
-The Enhanced PEPPOL eDelivery network implies no changes to the PEPPOL SML service.
+The Enhanced Peppol eDelivery network implies no changes to the Peppol SML service.
 
 
 === Service Metadata Publisher (SMP)
 
-The SMP is a standard component of the well-established PEPPOL eDelivery network link:#ref-16[[16\]], who’s role is to provide information about the receive capabilities of the PEPPOL Participants and the PEPPOL APs they use.
+The SMP is a standard component of the well-established Peppol eDelivery network link:#ref-16[[16\]], who’s role is to provide information about the receive capabilities of the Peppol Participants and the Peppol APs they use.
 
-The SMP is a distributed component in the PEPPOL eDelivery network.
+The SMP is a distributed component in the Peppol eDelivery network.
 
-The key information elements exposed by the PEPPOL SMP for each PEPPOL Participant are:
+The key information elements exposed by the Peppol SMP for each Peppol Participant are:
 
-* The PEPPOL Participant ID (PPID) used to identify the PEPPOL Participant in the eDelivery networkfootnote:[In the Norwegian market the “organisasjonsnummer” (Norwegian legal identity number) is used for this purpose.]
-* The business process and type of business documents the PEPPOL Participant can receive
-* The PEPPOL AP to which the business document shall be delivered
+* The Peppol Participant ID (PPID) used to identify the Peppol Participant in the eDelivery networkfootnote:[In the Norwegian market the “organisasjonsnummer” (Norwegian legal identity number) is used for this purpose.]
+* The business process and type of business documents the Peppol Participant can receive
+* The Peppol AP to which the business document shall be delivered
 
 . Key information elements exposed by ELMA.
 image::images/smp-key-information.png[]
 
-=== Business Certificate Publisher (BCP)
+=== CertPub Publisher (formerly Business Certificate Publisher (BCP))
 
-The Business Certificate Publisher link:#ref-32[[32\]] is a new component introduced with the Enhanced PEPPOL eDelivery Network.
+The CertPub Publisher link:#ref-32[[32\]] is a new component introduced with the Enhanced Peppol eDelivery Network.
 
-The role of the Business Certificate Publisher (Certificate server) is to store the public key of a the encryption certificate for a receiver who wishes to receive encrypted documents. This makes it possible to introduce end-to-end security. The service offers retrieval of the public key when a valid combination of participant identifiers and business process are used for the lookup.
+The role of the CertPub Publisher (Certificate server) is to store the public key of a the encryption certificate for a receiver who wishes to receive encrypted documents. This makes it possible to introduce end-to-end security. The service offers retrieval of the public key when a valid combination of participant identifiers and business process are used for the lookup.
 
-The key information elements exposed by the Business Certificate Publisher for each PEPPOL Participant in the Enhanced PEPPOL eDelivery network are:
+The key information elements exposed by the CertPub Publisher for each Peppol Participant in the Enhanced Peppol eDelivery network are:
 
-* The PEPPOL Participant ID used to identify the PEPPOL Participant in the eDelivery network
+* The Peppol Participant ID used to identify the Peppol Participant in the eDelivery network
 * The business process for which a given business certificate is used
 * The applicable encryption certificate
 
-.Key information elements exposed by the Business Certificate Publisher.
+.Key information elements exposed by the CertPub Publisher.
 image::images/bcp-key-information.png[]
 
 
-=== Business Certificate Locator (BCL)
+=== CertPub Locator
 
-The Business Certificate Locator link:#ref-32[[32\]] is a new component introduced with the Enhanced PEPPOL eDelivery Network.
+The CertPub Locator link:#ref-32[[32\]] is a new component introduced with the Enhanced Peppol eDelivery Network.
 
-BCL is heavily influenced by PEPPOL SML. The main difference is use of REST where PEPPOL SML uses DNS.
+CertPub Locator is heavily influenced by Peppol SML. The main difference is use of REST where Peppol SML uses DNS.
 
-The role of the BCL is to discover the BCP used by a given PEPPEL Participant.
+The role of the CertPub Locator is to discover the CertPub Publisher used by a given PEPPEL Participant.
 
 
 === ASiC-E archive
 
-The ASiC-E (Associated Signature Containers – Extended) is a new component introduced with the Enhanced PEPPOL eDelivery network.
+The ASiC-E (Associated Signature Containers – Extended) is a new component introduced with the Enhanced Peppol eDelivery network.
 
-ASiC-E is a file format to package data of various types into a zip-folder (the ASiC-E archive). Each ASiC-E archive can have payload (e.g. an ISO 2022-based financial message), additional information or metadata associated with it that can be protected by a signature.
+ASiC-E is a file format to package data of various types into a zip-folder (the ASiC-E archive). Each ASiC-E archive can have payload (e.g. an ISO 20022-based financial message), additional information or metadata associated with it that can be protected by a signature.
 
-The profile of ASiC-E as implemented in the Enhanced PEPPOL eDelivery network is defined in the technical specification provided by the e-Sense project link:#ref-18[[18\]].
+The profile of ASiC-E as implemented in the Enhanced Peppol eDelivery network is defined in the technical specification provided by the e-Sense project link:#ref-18[[18\]].
 
-In the Enhanced PEPPOL eDelivery network two instances of ASiC-E are used. The inner ASiC-E archive contains the actual business documentfootnote:[In case of straight through processing the Inner ASiC-E archive will also carry the signature generated by applying the Bank certificate.] and its associated metadata file, e.g. a pain.001- message and the metadata file placed in the root folder and the electronic seal of the sender is placed in the META-INF folder to prove integrity.
+In the Enhanced Peppol eDelivery network two instances of ASiC-E are used. The inner ASiC-E archive contains the actual business documentfootnote:[In case of straight through processing the Inner ASiC-E archive will also carry the signature generated by applying the Bank certificate.] and its associated metadata file, e.g. a pain.001- message and the metadata file placed in the root folder and the electronic seal of the sender is placed in the META-INF folder to prove integrity.
 
 .Content of inner ASiC-E archive.
 image::images/inner-asic.png[]
@@ -864,14 +852,14 @@ image::images/outer-asic.png[]
 
 The purpose of using the two ASiC containers is to exploit the rate of compression of the payload and attachments in an ASiC-E archive. Encrypting documents before compression will result in the compression rate to be much lower.
 
-For encryption of the actual ISO 20022-based financial message the hybrid encryption approach is applied as outlined in link:#ref-33[[33\]] using the encryption certificate assigned to the sending PEPPOL Participant.
+For encryption of the actual ISO 20022-based financial message the hybrid encryption approach is applied as outlined in link:#ref-33[[33\]] using the encryption certificate assigned to the sending Peppol Participant.
 
 
 === SBDH and SBD
 
-The Standard Business Document (SBD) and Standard Business Document Header (SDBH) are standard component of the well-established PEPPOL eDelivery network link:#ref-21[[21\]].
+The Standard Business Document (SBD) and Standard Business Document Header (SDBH) are standard component of the well-established Peppol eDelivery network link:#ref-21[[21\]].
 
-The function of the SBD is to provide an envelope around the data to be transported over the PEPPOL eDelivery network. The function of the SBDH is to carry routing information about the actual business document contained in the transmission.
+The function of the SBD is to provide an envelope around the data to be transported over the Peppol eDelivery network. The function of the SBDH is to carry routing information about the actual business document contained in the transmission.
 
 Information in the SBD and SBDH can be categorized into the following 4 categories:
 
@@ -880,7 +868,7 @@ Information in the SBD and SBDH can be categorized into the following 4 categori
 * Document Processing Context
 * Payload
 
-Document Routing information is captured in the 'Sender' and 'Receiver' data structures of the SBD/SBDH and it is used to identify the PEPPOL Participant acting in the roles as sender and receiver using PPID as unique identifiers.
+Document Routing information is captured in the 'Sender' and 'Receiver' data structures of the SBD/SBDH and it is used to identify the Peppol Participant acting in the roles as sender and receiver using PPID as unique identifiers.
 
 Document Identification information is captured in the 'DocumentIdentification' data structure of the SBD/SBDH. It is used to identify the specification to which the actual business document content enclosed inside the SBD complies. This information may be used by the sender and recipient to identify and route the message to the appropriate business application without having to open the business document payload.
 
@@ -891,9 +879,9 @@ The payload represents the actual business document, or more precisely the outer
 
 === Metadata file
 
-The metadata file is a new component introduced with the Enhanced PEPPOL eDelivery network.
+The metadata file is a new component introduced with the Enhanced Peppol eDelivery network.
 
-The function of the metadata file is to carry additional information about the message carried in the payload to facilitate correct internal routing and processing by the receiving PEPPOL Participants.
+The function of the metadata file is to carry additional information about the message carried in the payload to facilitate correct internal routing and processing by the receiving Peppol Participants.
 
 The actual content values to be included in the metadata file will be governed by the agreement between the business partners. The default setup is that the metadata attributes are not in use. Meaning that a business partner can only be expected to act based on the content of any metadata attribute, if this has been agreed between the two business partners.
 
@@ -918,38 +906,38 @@ The metadata file may include the following information elements:
 | Alphanumeric 22 characters
 |===
 
-* Customer ID: An identifier of the sender (corner 1) of the Enhanced PEPPOL transmission. Typically, an identifier issued by the receiver, for instance a customer id.
+* Customer ID: An identifier of the sender (corner 1) of the Enhanced Peppol transmission. Typically, an identifier issued by the receiver, for instance a customer id.
 * Division: This element will be withdrawn from use.
 * User ID: An identifier of the message originator or the party approving the message content. This could be an account owner or a power of attorney. Especially when the message originator is different from the party operating Corner 1.
 
 
 === Acknowledgments and exception reporting
 
-The Enhanced PEPPOL eDelivery network introduces some enhanced and new requirements for the use of acknowledgments and exception reporting to support the requirements for reliability and full traceability of the message exchange.
+The Enhanced Peppol eDelivery network introduces some enhanced and new requirements for the use of acknowledgments and exception reporting to support the requirements for reliability and full traceability of the message exchange.
 
 As responsibility for processing is transferred from one role to another, the actor performing a given role is required to generate and forward an acknowledgment to the preceding role as illustrated in Figure 10.
 
 .Use of confirmation message (RC4) and exception report (RC4b).
 image::images/achnowledgements.png[]
 
-The receiving PEPPOL AP will generate and return an MDN (Message Delivery Notification) to the sending PEPPOL AP.
+The receiving Peppol AP will generate and return an MDN (Message Delivery Notification) to the sending Peppol AP.
 
-The receiving PEPPOL Participant will generate and return an confirmation message (known as RC4 link:#ref-28[[28\]]) to confirm that the transmission is received before starting un-packing and processing of the ASiC-E archive.
+The receiving Peppol Participant will generate and return an confirmation message (known as RC4 link:#ref-28[[28\]]) to confirm that the transmission is received before starting un-packing and processing of the ASiC-E archive.
 
-If any exceptions are detected during the un-packaging and processing of the ASiC-E archive, such as errors related to signature validation or decryption, an exception report (known as RC4b link:#ref-29[[29\]]) is created and returned to the Sending PEPPOL Participant.
+If any exceptions are detected during the un-packaging and processing of the ASiC-E archive, such as errors related to signature validation or decryption, an exception report (known as RC4b link:#ref-29[[29\]]) is created and returned to the Sending Peppol Participant.
 
-The Reception Acknowledgment Message link:#ref-28[[28\]] and Handling Exception Message link:#ref-29[[29\]] are new components introduced with the Enhanced PEPPOL eDelivery network. Due to network configuration and priorities, the sending PEPPOL Participant may in some cases receive an RC4b (exception report) before the corresponding RC4 (acknowledgment). The sequence in which these two messages are received shall not be considered significant.
+The Reception Acknowledgment Message link:#ref-28[[28\]] and Handling Exception Message link:#ref-29[[29\]] are new components introduced with the Enhanced Peppol eDelivery network. Due to network configuration and priorities, the sending Peppol Participant may in some cases receive an RC4b (exception report) before the corresponding RC4 (acknowledgment). The sequence in which these two messages are received shall not be considered significant.
 
-There is a requirement on the PEPPOL AP providers offering services in the Enhanced PEPPOL eDelivery network to make all received acknowledgments and exception reports available to the PEPPOL Participant. The actual content and structure of how this is done is however left for the PEPPOL AP provider and PEPPOL Participant to agree.
+There is a requirement on the Peppol AP providers offering services in the Enhanced Peppol eDelivery network to make all received acknowledgments and exception reports available to the Peppol Participant. The actual content and structure of how this is done is however left for the Peppol AP provider and Peppol Participant to agree.
 
-Even though there are obligations on each actor to follow-up and initiate investigation if acknowledgments or exception reports are not received, it is the ultimately the Sending PEPPOL Participant who shall ensure that appropriate responses ate received.
+Even though there are obligations on each actor to follow-up and initiate investigation if acknowledgments or exception reports are not received, it is the ultimately the Sending Peppol Participant who shall ensure that appropriate responses ate received.
 
 
 === MDN
 
-The MDN is a standard component of the well-established PEPPOL eDelivery network link:#ref-15[[15\]] used to provide an acknowledgment on messages exchanged between PEPPOL APs.
+The MDN is a standard component of the well-established Peppol eDelivery network link:#ref-15[[15\]] used to provide an acknowledgment on messages exchanged between Peppol APs.
 
-To meet the increased requirements for security and trust required for exchange of financial messages, an enhanced version of the MDN will be used in the Enhanced PEPPOL eDelivery network.
+To meet the increased requirements for security and trust required for exchange of financial messages, an enhanced version of the MDN will be used in the Enhanced Peppol eDelivery network.
 
 This enhanced version of the MDN implements two key features:
 
@@ -959,32 +947,32 @@ This enhanced version of the MDN implements two key features:
 
 === REM evidences
 
-As the exchange of financial messages requires secure evidence of the message exchange, the Enhanced PEPPOL eDelivery network uses a part of REM (Registered Electronic Mail) standardized by ETSI.
+As the exchange of financial messages requires secure evidence of the message exchange, the Enhanced Peppol eDelivery network uses a part of REM (Registered Electronic Mail) standardized by ETSI.
 
-REM evidence link:#ref-20[[20\]] is a new component introduced with the Enhanced PEPPOL eDelivery network to provide for non-repudiation, where the MDN (Message Disposition Notification) is put into the REM evidence by the PEPPOL AP provider. The REM evidence is then signed and stored by the PEPPOL AP provider
+REM evidence link:#ref-20[[20\]] is a new component introduced with the Enhanced Peppol eDelivery network to provide for non-repudiation, where the MDN (Message Disposition Notification) is put into the REM evidence by the Peppol AP provider. The REM evidence is then signed and stored by the Peppol AP provider
 
 
-== Use of building blocks in the Enhanced PEPPOL eDelivery network
+== Use of building blocks in the Enhanced Peppol eDelivery network
 
 By combining the building blocks described above, secure end-to-end messaging is achieved. A short description of the process of combining the components is given below and further elaborated in link:#ref-13[[13\]]. The technical details of this process may also be found at link:#ref-31[[31\]].
 
 The typical process steps involved are:
 
-Sending PEPPOL Participant::
+Sending Peppol Participant::
 . Create the ISO 20022-based financial message
 . Create the metadata file associated to the ISO 20022-based financial message
 . Create the inner ASiC-E archive
 . Create the inner SBDH
 . Create the outer ASiC-E archive
 . Create the outer SBD
-Sending PEPPOL AP::
+Sending Peppol AP::
 [start=7]
-.	Add transport oriented packaging and security to ensure integrity and confidentiality at transport level between PEPPOL APs
-Receiving PEPPOL AP
+.	Add transport oriented packaging and security to ensure integrity and confidentiality at transport level between Peppol APs
+Receiving Peppol AP
 . Verify transport oriented packaging and security
 . Acknowledge receipt
 . Create and store REM evidence
-Receiving PEPPOL Participant::
+Receiving Peppol Participant::
 [start=11]
 .	Create reception acknowledgement message
 .	Verify packaging and potentially create exception handling message
@@ -1001,41 +989,36 @@ The inner ASiC-E archive may carry one or more signatures resulting from applyin
 
 * Authenticate the business transition in case of straight through processing.
 * Support approval of message content by more than one person (4-eyes principle).
-* Transfer signature(s) on the business level, when a 3rd party operates Enhanced PEPPOL corners 1 (and 4).
+* Transfer signature(s) on the business level, when a 3rd party operates Enhanced Peppol corners 1 (and 4).
 * Authenticate on lower levels than enterprise level. For instance, transferring the signature of the person approving the message content.
 
-The outer ASiC-E archive shall carry the encryption certificate use to encrypt the inner ASiC-E archive as well as the electronic seal generated by applying the signing certificate issued to the sending PEPPOL Participant on the encrypted content.
+The outer ASiC-E archive shall carry the encryption certificate use to encrypt the inner ASiC-E archive as well as the electronic seal generated by applying the signing certificate issued to the sending Peppol Participant on the encrypted content.
 
 
 == Open source components
 
 The components (building blocks) of the Enhanced eDelivery network are implemented as open source components or made available as part of commercially available software products.
 
-The most significant open source components available to realise the functions needed for a sending or receiving PEPPOL Participant or PEPPOL AP Provider are described in the following sub-sections.
+The most significant open source components available to realise the functions needed for a sending or receiving Peppol Participant or Peppol AP Provider are described in the following sub-sections.
 
 
 === Oxalis
 
-Oxalis is an open source implementation of a PEPPOL access point according to the specifications used by OpenPEPPOL. The project focuses on handling of messages in a secure manner. The project itself contains only those interfaces required by the specifications and interfaces needed to extend existing solutions with PEPPOL transmission capabilities or to create new services part of PEPPOL network. The project is written in Java.
+Oxalis is an open source implementation of a Peppol access point according to the specifications used by OpenPeppol. The project focuses on handling of messages in a secure manner. The project itself contains only those interfaces required by the specifications and interfaces needed to extend existing solutions with Peppol transmission capabilities or to create new services part of Peppol network. The project is written in Java.
 
-As from version 4.0 Oxalis provides full support for the Enhanced PEPPOL eDelivery network.
-
-
-=== SRest
-
-SRest, also known as Ringo, is a REST interface for administration and handling of messages to be sent into and received from the PEPPOL eDelivery network. This project streamlines the interfaces between the sending PEPPOL participant and its PEPPOL AP provider as well as between the receiving PEPPOL AP provider and the receiving PEPPOL Participant, to allow for easier switching between services providers. This project is initiated by Difi based on feedback from the marked requesting standardization of more aspects related to OpenPEPPOL.
+As from version 4.0 Oxalis provides full support for the Enhanced Peppol eDelivery network.
 
 
-=== VEFA PEPPOL
+=== VEFA Peppol
 
-VEFA PEPPOL is an open source project implementing support for several of the building blocks used in the Enhanced PEPPOL eDelivery network, such as:
+VEFA Peppol is an open source project implementing support for several of the building blocks used in the Enhanced Peppol eDelivery network, such as:
 
 * REM evidence
 * ICD
 * Look-up (i.e. an SML/SMP-client)
 * An SMP-Interface (SMP-server)
 * SBDH
-* PEPPOL-PKI
+* Peppol-PKI
 
 This project may be utilized for one or more of the above building blocks. For instance, an implementation may use this project to implement generation of the SBDH.
 
@@ -1058,25 +1041,25 @@ IMPORTANT: The customer shall have a signed contract with its bank regarding the
 
 == Service provision agreement
 
-In the role as PEPPOL Participant the business entity, as well as the bank, will have an agreement with a PEPPOL AP Provider. The business entity and the bank may make use of the same or different PEPPOL AP Providers.
+In the role as Peppol Participant the business entity, as well as the bank, will have an agreement with a Peppol AP Provider. The business entity and the bank may make use of the same or different Peppol AP Providers.
 
-IMPORTANT: A PEPPOL Participant shall have a signed contract with its PEPPOL AP Provider.
+IMPORTANT: A Peppol Participant shall have a signed contract with its Peppol AP Provider.
 
-This service provision agreement will govern the details related to the services offered by the PEPPOL AP Provider and how the PEPPOL AP service is connected to the internal ICT infrastructure of the PEPPOL Participant. The detailed content of this agreement is left for the parties to define.
+This service provision agreement will govern the details related to the services offered by the Peppol AP Provider and how the Peppol AP service is connected to the internal ICT infrastructure of the Peppol Participant. The detailed content of this agreement is left for the parties to define.
 
 
-== The PEPPOL Agreement Framework for Enhanced PEPPOL eDelivery
+== The Peppol Agreement Framework for Enhanced Peppol eDelivery
 
-The PEPPOL Agreement Framework for Enhanced PEPPOL eDelivery is a multilateral agreement between PEPPOL AP Providers for provision of Enhanced PEPPOL eDelivery services. The purpose of this agreement is secure a minimum set of common services and service levels.
+The Peppol Agreement Framework for Enhanced Peppol eDelivery is a multilateral agreement between Peppol AP Providers for provision of Enhanced Peppol eDelivery services. The purpose of this agreement is secure a minimum set of common services and service levels.
 
-The PEPPOL Agreement Framework for Enhanced PEPPOL eDelivery is built up of the following elements:
+The Peppol Agreement Framework for Enhanced Peppol eDelivery is built up of the following elements:
 
-* The *PEPPOL Authority Agreement* which gives a PEPPOL Authority responsibility for the implementation and use of the Enhanced PEPPOL eDelivery network within its geographical or industrial juristictionfootnote:[Difi acts as a PEPPOL Authority within the country of Norway, and has furthermore been assigned as PEPPOL Authority for the payment business domain.] domain;
-* The *PEPPOL eDelivery Agreement* which authorises the PEPPOL AP Provider to provide PEPPOL AP services in the Enhanced PEPPOL eDelivery network;
+* The *Peppol Authority Agreement* which gives a Peppol Authority responsibility for the implementation and use of the Enhanced Peppol eDelivery network within its geographical or industrial juristictionfootnote:[DFØ acts as a Peppol Authority within the country of Norway, and has furthermore been assigned as Peppol Authority for the payment business domain.] domain;
+* The *Peppol eDelivery Agreement* which authorises the Peppol AP Provider to provide Peppol AP services in the Enhanced Peppol eDelivery network;
 
-IMPORTANT: A PEPPOL AP Provider offering services for transport of ISO 20022-based financial messages in the Enhanced PEPPOL eDelivery network shall have a PEPPOL eDelivery Agreement  signed with the appropriate PEPPOL Authorityfootnote:[Difi acts as a PEPPOL Authority within the country of Norway, and has furthermore been assigned as PEPPOL Authority for the payment business domain.].
+IMPORTANT: A Peppol AP Provider offering services for transport of ISO 20022-based financial messages in the Enhanced Peppol eDelivery network shall have a Peppol eDelivery Agreement  signed with the appropriate Peppol Authorityfootnote:[DFØ acts as a Peppol Authority within the country of Norway, and has furthermore been assigned as Peppol Authority for the payment business domain.].
 
-IMPORTANT: The PEPPOL AP shall be verified and certified as conferment to the specifications of the Enhanced PEPPOL eDelivery network by the PEPPOL Authority with whom the service provider has an agreement before they will be enrolled with a production certificate
+IMPORTANT: The Peppol AP shall be verified and certified as conferment to the specifications of the Enhanced Peppol eDelivery network by the Peppol Authority with whom the service provider has an agreement before they will be enrolled with a production certificate
 
 
 = Use cases
@@ -1086,7 +1069,7 @@ As an example, the business entity initiating a payment transaction may operate 
 
 * have its own internal accounting staff operating,
 * its own installation of an ERP solution, and
-* operating its own PEPPOL AP service connected to the Enhanced PEPPOL eDelivery network.
+* operating its own Peppol AP service connected to the Enhanced Peppol eDelivery network.
 
 In such a scenario, there is a very clear and direct line of communication between the business entity and his bank where the business entity has full operational control for all aspects of the process.
 
@@ -1094,24 +1077,24 @@ On the other extreme: a business entity may
 
 * use a Shared Service Centre offered by an external third party,
 * who is using an ERP solution hosted by another third party,
-* who is connected to a commercial PEPPOL AP Provider offered by yet another organisation.
+* who is connected to a commercial Peppol AP Provider offered by yet another organisation.
 
-Even in this most complex scenario, it is the PEPPOL Participant identified as the sender or receiver of a message that is ultimately responsible for the complete process. As a matter of principle, the internal complexity of how the IT infrastructure is organised should not be of concern to other actors. The Shared Service Centre, ERP solution provider and PEPPOL AP Provider are all acting on behalf of the PEPPOL Participant.
+Even in this most complex scenario, it is the Peppol Participant identified as the sender or receiver of a message that is ultimately responsible for the complete process. As a matter of principle, the internal complexity of how the IT infrastructure is organised should not be of concern to other actors. The Shared Service Centre, ERP solution provider and Peppol AP Provider are all acting on behalf of the Peppol Participant.
 
-.Service providers acting on behalf of the PEPPOL Participant.
+.Service providers acting on behalf of the Peppol Participant.
 image::images/service-providers.png[]
 
-IMPORTANT: A PEPPOL Participant shall ensure that signed contracts exist for all third-party services provided on its behalf.
+IMPORTANT: A Peppol Participant shall ensure that signed contracts exist for all third-party services provided on its behalf.
 
-IMPORTANT: A PEPPOL Participant shall ensure that service providers acting on its behalf has access to sufficient information (e.g. internal routing information and certificates) allowing them to fulfil their obligations as expected.
+IMPORTANT: A Peppol Participant shall ensure that service providers acting on its behalf has access to sufficient information (e.g. internal routing information and certificates) allowing them to fulfil their obligations as expected.
 
 == Transfer of legal responsibility
 
-As is noted above, it is the PEPPOL Participant identified as the sender or receiver of a message that is ultimately responsible for the complete process. This implies that the legal responsibility is transferred somewhere between the sender and receiver. A term frequently used in legislation is “come to the knowledge of”, which in general terms can be interpreted as “the receiver of some information is bound by that information as soon as it enters its domain of responsibility”. Based on this understanding the European Commission has provided a ruling stating that “an electronic message is received as soon as the last byte is received by the recipient’s access point”.
+As is noted above, it is the Peppol Participant identified as the sender or receiver of a message that is ultimately responsible for the complete process. This implies that the legal responsibility is transferred somewhere between the sender and receiver. A term frequently used in legislation is “come to the knowledge of”, which in general terms can be interpreted as “the receiver of some information is bound by that information as soon as it enters its domain of responsibility”. Based on this understanding the European Commission has provided a ruling stating that “an electronic message is received as soon as the last byte is received by the recipient’s access point”.
 
-It follows from this that the PEPPOL Participant has responsibility for all service providers acting on its behalf.
+It follows from this that the Peppol Participant has responsibility for all service providers acting on its behalf.
 
-IMPORTANT: A PEPPOL Participant shall ensure secure and reliable processing of information within its domain of responsibility.
+IMPORTANT: A Peppol Participant shall ensure secure and reliable processing of information within its domain of responsibility.
 
 .Transfer of legal responsibility.
 image::images/legal-responsibility.png[]
@@ -1126,9 +1109,9 @@ The following sub-sections describes some common use-cases and how they affect t
 
 In this use case a business entity is using an internal accounting function/department to process its accounting, including all its payments.
 
-The business entity has a business agreement with its bank for use of ISO 20022-based financial messages for straight through processing. It also has an agreement with a PEPPOL AP provider (AP1) giving access to the Enhanced PEPPOL eDelivery network.
+The business entity has a business agreement with its bank for use of ISO 20022-based financial messages for straight through processing. It also has an agreement with a Peppol AP provider (AP1) giving access to the Enhanced Peppol eDelivery network.
 
-The registrations needed in a PEPPOL SMP and the Business Certificate Publisher to support this use case are:
+The registrations needed in a Peppol SMP and the CertPub Publisher to support this use case are:
 
 [cols="1,1,1,1,1", options="header"]
 .Registration in ELMA for the “Using an internal accounting function” use case.
@@ -1137,7 +1120,7 @@ The registrations needed in a PEPPOL SMP and the Business Certificate Publisher 
 | PPID
 | Business process
 | Business document type
-| PEPPOL AP
+| Peppol AP
 
 | Business entity
 | 987654321
@@ -1160,7 +1143,7 @@ The registrations needed in a PEPPOL SMP and the Business Certificate Publisher 
 
 
 [cols="1,1,1,2"]
-.Registration in BCP for the “Using an internal accounting function” use case.
+.Registration in CertPub Publisher for the “Using an internal accounting function” use case.
 |===
 | Actor name
 | PPID
@@ -1190,9 +1173,9 @@ In this use case a business entity is using an internal accounting function/depa
 
 Also in this case, the business entity need to have a business agreement with its bank for use of ISO 20022-based financial messages. The Bank Agreement also need to make it clear that final approval of the payment transaction takes place in the internet banking system.
 
-The business entity will also have an agreement with a PEPPOL AP provider (AP1) giving access to the Enhanced PEPPOL eDelivery network.
+The business entity will also have an agreement with a Peppol AP provider (AP1) giving access to the Enhanced Peppol eDelivery network.
 
-The registrations needed in a PEPPOL SMP and the Business Certificate Publisher to support this use case are the same as for the previous use case.
+The registrations needed in a Peppol SMP and a CertPub Publisher to support this use case are the same as for the previous use case.
 
 
 == Use of a Shared Service Centre with delegated authority
@@ -1201,7 +1184,7 @@ In this use case a business entity is using a Shared Service Centre (SSC) to pro
 
 The business entity has a Bank Agreement for use of ISO 20022-based financial messages for straight through processing authorising the SSC to debit its account. This implies that the SSC will be identified as an initiating party within the ISO 20022-based financial message.
 
-In this use case, it is either the business entity or the SSC acting on behalf of the business entity who is identified as the PEPPOL Participant. Who is allocated the role as PEPPOL Participant depends on the agreement between the business entity and the bank.
+In this use case, it is either the business entity or the SSC acting on behalf of the business entity who is identified as the Peppol Participant. Who is allocated the role as Peppol Participant depends on the agreement between the business entity and the bank.
 
 
 == Use of a Shared Service Centre with two-level authorisation
@@ -1210,4 +1193,4 @@ In this use case a business entity is using a Shared Service Centre (SSC) to pro
 
 Also in this use case the business entity need to have a business agreement with its bank for use of ISO 20022-based financial messages. The Bank Agreement also need to make it clear that final approval of the payment transaction takes place in the internet banking system. As the SSC is preparing the actual ISO 20022-based financial message, the SSC will be identified as an initiating party.
 
-Again, it is either the business entity or the SSC acting on behalf of the business entity who is identified as the PEPPOL Participant. Who is allocated the role as PEPPOL Participant depends on the agreement between the business entity and the bank.
+Again, it is either the business entity or the SSC acting on behalf of the business entity who is identified as the Peppol Participant. Who is allocated the role as Peppol Participant depends on the agreement between the business entity and the bank.
