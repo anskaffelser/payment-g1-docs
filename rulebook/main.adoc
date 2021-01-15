@@ -136,6 +136,7 @@ Other:
 * Updated references to Difi.
 * Removing references to AS2 (1.2).
 * Removing information regarding SREST (8.4.2).
+* Adding appendix B.
 
 | Erlend Klakegg Bergheim +
 Lars Fixdal
@@ -1194,3 +1195,7 @@ In this use case a business entity is using a Shared Service Centre (SSC) to pro
 Also in this use case the business entity need to have a business agreement with its bank for use of ISO 20022-based financial messages. The Bank Agreement also need to make it clear that final approval of the payment transaction takes place in the internet banking system. As the SSC is preparing the actual ISO 20022-based financial message, the SSC will be identified as an initiating party.
 
 Again, it is either the business entity or the SSC acting on behalf of the business entity who is identified as the Peppol Participant. Who is allocated the role as Peppol Participant depends on the agreement between the business entity and the bank.
+
+= Examples of signatures and metadata
+
+This appendix is available as a link:attachments/appendix-b-v1.0.pdf[separat file].
