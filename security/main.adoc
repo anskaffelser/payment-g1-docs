@@ -587,7 +587,9 @@ BCP is a shared certificate server for storage of public certificates. It will s
 == Technical standards
 
 
-=== Signing
+=== Content signatures
+
+Signatures are created based upon link:https://www.etsi.org/deliver/etsi_ts/119300_119399/119312/01.03.01_60/ts_119312v010301p.pdf[ETSI TS 119 312 v1.3.1] with the following algorithms used:
 
 [cols="1,1,6", options="header"]
 |===
@@ -597,11 +599,29 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 | 6.1.1
 | M*
-| Hashing: SHA-256
+| Signature suite used: `sha3-with-ecdsa`
+
+| 6.1.2
+| M*
+| Hashing function used: `SHA3-256`
+
+| 6.1.3
+| M*
+| Signature algorithm used: `EC-DSA`
 |===
 
+[INFO]
+====
+Timeline for introduction of 6.1 requirements:
 
-=== Encryption
+* February 15th 2021: Release of requirements.
+* August 15th 2021: Mandatory to support in reception in addition to legacy algorithms.
+* September 15th 2021: Optional use in sending.
+* October 15th 2021: Mandatory use. No more use of legacy algorithms.
+====
+
+
+=== Content encryption
 
 [cols="1,1,6", options="header"]
 |===
