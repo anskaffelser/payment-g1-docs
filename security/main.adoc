@@ -405,11 +405,11 @@ The chapters below set out security requirements for participants
 
 | 5.2.5
 | O
-| The sender may elect to use a second signature on the inner ASIC container (Sign 2)
+| The sender may elect to send one or more business level signatures in the inner ASIC container
 
 | 5.2.6
 | C
-| If sender uses a second signature in addition to the sign 1 on the inner ASIC, signatures are considered to be parallel i.e. signing the same content – not signing each other.
+| If sender provides business signatures in addition to the sign 1 in the inner ASIC, the business signatures are considered to be content (Data Objects).  Signature 1 signs both the payload and the business signatures of the payload. 
 
 | 5.2.7
 | M
@@ -564,7 +564,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 | 5.8.4
 | C
-| If there is an agreement between C1 and C4 to use an additional sign 2, verification of this shall follow terms in the agreement and general best practices for signature validation
+| If there is an agreement between C1 and C4 to transfer business level signatures, verification of those signatures shall be agreed between the business partners and follow general best practices for signature validation
 
 | 5.8.5
 | M
@@ -572,7 +572,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 | 5.8.6
 | O
-| Following verification, sign 1 may be disregarded in favor of other metadata (eg sign 2) for further use internally in the organization
+| Following verification, sign 1 may be disregarded in favour of other metadata (eg business level signatures) for further use internally in the organization
 
 | 5.8.7
 | M
