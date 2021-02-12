@@ -1,6 +1,6 @@
 = Rulebook
 Bits AS
-v1.1.0 SNAPSHOT
+v1.0.1 SNAPSHOT
 :description: Enhanced Peppol eDelivery as communication infrastructure for financial messages in ISO 20022
 :doctype: book
 :icons: font
@@ -112,8 +112,8 @@ a| Updated based on comments from PoC and work related to onboarding. Besides so
 | Bi-weekly collaboration meeting decides to elevate version 0.95 to version 1.0.0.
 |
 
-| XX.XX.2021
-| 1.1.0
+| 15.02.2021
+| 1.0.1
 a| Updates related to CertPub:
 
 * Updating link to CertPub documentation (1.2).
@@ -137,6 +137,8 @@ Other:
 * Removing references to AS2 (1.2).
 * Removing information regarding SREST (8.4.2).
 * Adding appendix B.
+
+Additional changes based on review are documented as a link:attachments/review-2021q1.pdf[separat document].
 
 | Erlend Klakegg Bergheim +
 Lars Fixdal
@@ -241,11 +243,6 @@ Available on request post@bits.no
 | Bits
 
 3+h| Source specifications related to Enhanced Peppol eDelivery
-
-| [13] [[ref-13]]
-| Use of Enhanced Peppol eDelivery network for ISO 20022 +
-https://vefa.difi.no/iso20022/standard/Peppol/
-| Difi
 
 | [14] [[ref-14]]
 | Service level requirements for providers of Peppol Access Points services in the Enhanced Peppol eDelivery network +
@@ -764,7 +761,7 @@ IMPORTANT: Peppol AP Providers offering services in the Enhanced Peppol eDeliver
 The Peppol eDelivery network as currently used for e.g. electronic invoicing, is a profile of the European Commission Connecting Europe Facility (CEF) eDelivery Digital Service Infrastructure (DSI), or a Peppol eDelivery for short.
 
 .Peppol eDelivery
-image::images/Peppol-edelivery.png[]
+image::images/peppol-edelivery.png[]
 
 
 === The Enhanced Peppol eDelivery network
@@ -776,11 +773,11 @@ The specifications for this enhanced version of the Peppol eDeiivery network wer
 The main features of the Enhanced Peppol eDelivery network is that it supports a higher level of security, including encryption of documents and the ability to track and trace all messages sent throughout the network.
 
 .Enhanced Peppol eDelivery
-image::images/enhanced-Peppol-edelivery.png[]
+image::images/enhanced-peppol-edelivery.png[]
 
 == Building blocks of the Enhanced Peppol eDelivery network
 
-The Enhanced Peppol eDelivery network is built by combining a set of standardised building blocks, some of which are available as open source software. The process of combining the components is elaborated in link:#ref-13[[13\]]. A short description of the different components (building blocks) of the Enhanced eDelivery network is given in the following sub-sections.
+The Enhanced Peppol eDelivery network is built by combining a set of standardised building blocks, some of which are available as open source software. A short description of the different components (building blocks) of the Enhanced eDelivery network is given in the following sub-sections.
 
 
 === Service Metadata Locator (SML)
@@ -830,7 +827,7 @@ The CertPub Locator link:#ref-32[[32\]] is a new component introduced with the E
 
 CertPub Locator is heavily influenced by Peppol SML. The main difference is use of REST where Peppol SML uses DNS.
 
-The role of the CertPub Locator is to discover the CertPub Publisher used by a given PEPPEL Participant.
+The role of the CertPub Locator is to discover the CertPub Publisher used by a given Peppol Participant.
 
 
 === ASiC-E archive
@@ -895,7 +892,7 @@ The metadata file may include the following information elements:
 | Representation
 
 | Customer ID
-| Alternative Id of corner 1.
+| An identifier of the sender (corner 1) of the Enhanced Peppol transmission. Typically, an identifier issued by the receiver, for instance a customer id.
 | Alphanumeric 22 characters
 
 | Division
@@ -903,13 +900,9 @@ The metadata file may include the following information elements:
 | Numeric 3 characters
 
 | User ID
-| An identifier of the party approving the message content.
+| An identifier of the message originator or the party approving the message content. This could be an account owner or a power of attorney. Especially when the message originator is different from the party operating Corner 1.
 | Alphanumeric 22 characters
 |===
-
-* Customer ID: An identifier of the sender (corner 1) of the Enhanced Peppol transmission. Typically, an identifier issued by the receiver, for instance a customer id.
-* Division: This element will be withdrawn from use.
-* User ID: An identifier of the message originator or the party approving the message content. This could be an account owner or a power of attorney. Especially when the message originator is different from the party operating Corner 1.
 
 
 === Acknowledgments and exception reporting
@@ -955,7 +948,7 @@ REM evidence link:#ref-20[[20\]] is a new component introduced with the Enhanced
 
 == Use of building blocks in the Enhanced Peppol eDelivery network
 
-By combining the building blocks described above, secure end-to-end messaging is achieved. A short description of the process of combining the components is given below and further elaborated in link:#ref-13[[13\]]. The technical details of this process may also be found at link:#ref-31[[31\]].
+By combining the building blocks described above, secure end-to-end messaging is achieved. A short description of the process of combining the components is given below. The technical details of this process may also be found at link:#ref-31[[31\]].
 
 The typical process steps involved are:
 
@@ -986,16 +979,16 @@ Figure 10 below illustrates how the results of the different certificates are ca
 .Use of signing, sealing and encryption certificates
 image::images/use-of-certificates.png[]
 
-Banks issue business level certificates (Bank Certificates) to their customers (account owners). The purpose of signatures by Bank Certificates is to authenticate the business transition in case of straight through processing. The customers or their representatives signs the content of ISO 20022 based messages with those certificates.  The signatures should be validated by the application processing the ISO 20022 based message. 
+Banks may issue business level certificates (Bank Certificates) to their customers (account owners). The purpose of signatures by Bank Certificates is to authenticate the business transition in case of straight through processing. The customers or their representatives signs the content of ISO 20022 based messages with those certificates.  The signatures should be validated by the application processing the ISO 20022 based message. 
 
-The inner ASiC-E archive may carry one or more signatures resulting from applying Bank Certificates to the content of the ISO 20022-based financial message. Those signatures shall be seen as additional content-files and be signed using the Enhanced Peppol certificate.
+The inner ASiC-E archive may carry one or more signatures resulting from applying Bank Certificates to the content of the ISO 20022-based financial message. Those signatures shall be seen as additional content-files and be signed using the business certificate.
 
-The Enhanced Peppol certificates are issued by Certificate Authorities trusted by the Enhanced Peppol authorities. The signatures  based on those certificates are used for authenticating the sender (Corner 1) and ensure the integrity of the Enhanced Peppol messages between Corner 1 and Corner 4.
+The business certificates are issued by Trust Service Providers approved by CerPub. The signatures based on those certificates are used for authenticating the sender (Corner 1) and ensure the integrity of the messages between Corner 1 and Corner 4.
 
-The inner ASiC-E archive shall carry the electronic seal generated by applying the Enhanced Peppol signing certificate issued to the sending Peppol Participant on the ISO 20022-based financial message.
-Illustration X shows an ASiC with an Enhanced Peppol signature (in blue) and a Bank certificate based signature (in red).
+The inner ASiC-E archive shall carry the electronic seal generated by applying the business signing certificate issued to the sending Peppol Participant on the ISO 20022-based financial message.
+The following illustration shows an ASiC with a business signature (in blue) and a bank certificate based signature (in red).
 
-.Enhanced Peppol and Bank certificate signatures in ASiC
+.Business and Bank certificate signatures in ASiC
 image::images/signatures-inside-asic.png[]
 
 == Open source components

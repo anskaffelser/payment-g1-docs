@@ -1,6 +1,6 @@
 = Security requirements for secure file transactions
 Bits AS
-0.91b
+0.92 SNAPSHOT
 :doctype: book
 :icons: font
 :toc: left
@@ -97,9 +97,15 @@ Annex 2 added
 | 13.10.2017
 | E. K. Bergheim
 
-| TBA
-| Moving "3. Background" to "1. Background". Adding "3. Migration" and "6. Technical standards".
-| TBA
+| 0.92
+a| 
+* Moving "3. Background" to "1. Background"
+* Adding "3. Migration"
+* Adding "6. Technical standards"
+
+Additional changes based on review are documented as a link:attachments/review-2021q1.pdf[separat document].
+
+| 15.02.2021
 | E. K. Bergheim
 |===
 
@@ -243,16 +249,16 @@ All references to PEPPOL in this document refers to the Enhanced PEPPOL eDeliver
 
 == Migrations
 
-[cols="4,1,1", options="header"]
-|===
-| Part
-| Deadline receiver
-| Deadline sender
+The following migrations are currently happening or are triggered by this version of the document:
 
-| 6. Technical Standards
-| 2020-09-15
-| 2020-10-15
-|===
+* Introduction of 6.1
+* Introduction of 6.2
+* The following requirements are removed after migrations related to 6.1 and 6.2 are completed:
+** 5.1.12
+** 5.1.13
+** 5.1.14
+
+Please see the timeline expressed in the relevant part.
 
 
 == Valid RC4b response codes from C4
@@ -355,15 +361,15 @@ The chapters below set out security requirements for participants
 | In cases of suspected private key compromises, all participants must inform their trust anchor service provider immediately
 
 | 5.1.12
-| M
+| M**D**
 | The AES-256-GCM algorithm shall be used for encryption of an ISO 20022-based financial message
 
 | 5.1.13
-| M
+| M**D**
 | The signature scheme should use as minimum use SHA-256 and 2048 bits
 
 | 5.1.14
-| M
+| M**D**
 | RSA-PSS signature formats shall be used for integrity control
 
 | 5.1.15
@@ -608,6 +614,10 @@ Signatures are created based upon link:https://www.etsi.org/deliver/etsi_ts/1193
 | 6.1.3
 | M*
 | Signature algorithm used: `EC-DSA`
+
+| 6.1.4
+| M*
+| Minimum 3072 bits key length for RSA keys
 |===
 
 [INFO]
@@ -635,12 +645,26 @@ Timeline for introduction of 6.1 requirements:
 
 | 6.2.2
 | M*
-| Signature Scheme: Probabilistic Signature Scheme (PSS)
+| Key encryption with: RSA-OAEP
 
 | 6.2.3
 | M*
-| Encryption: AES256-GCM
+| Encryption: AES with 256bit keys +
+Mode of operation: GCM
+| 6.2.4
+| M*
+| Minimum 3072 bits key length for RSA keys
 |===
+
+[INFO]
+====
+Timeline for introduction of 6.2 requirements:
+
+* February 15th 2021: Release of requirements.
+* August 15th 2021: Mandatory to support in reception in addition to legacy algorithms.
+* September 15th 2021: Optional use in sending.
+* October 15th 2021: Mandatory use. No more use of legacy algorithms.
+====
 
 
 [appendix]
