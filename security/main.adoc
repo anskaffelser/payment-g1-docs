@@ -595,7 +595,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 === Content signatures
 
-Signatures are created based upon link:https://www.etsi.org/deliver/etsi_ts/119300_119399/119312/01.03.01_60/ts_119312v010301p.pdf[ETSI TS 119 312 v1.3.1] with the following algorithms used:
+Signatures are created and validated based upon cryptographic algorithms as described in link:https://www.etsi.org/deliver/etsi_ts/119300_119399/119312/01.03.01_60/ts_119312v010301p.pdf[ETSI TS 119 312 v1.3.1.] and link:https://www.sogis.eu/documents/cc/crypto/SOGIS-Agreed-Cryptographic-Mechanisms-1.2.pdf[SOG-IS Agreed Cryptographic Mechanisms].
 
 [cols="1,1,6", options="header"]
 |===
@@ -604,30 +604,41 @@ Signatures are created based upon link:https://www.etsi.org/deliver/etsi_ts/1193
 | Requirement
 
 | 6.1.1
-| M*
-| Signature suite used: `sha3-with-ecdsa`
+| M
+a| Signature suites can be any of the following: 
+
+1. “sha3-with-ecdsa” (recommended) 
+** Hashing function shall be SHA3-256 
+** Signature algorithm: ECDSA
+** Elliptic curve parameters used shall be based on the NIST-curves (FIPS 186-4)
+
+1. “rsa-pss with mgf1SHA-256Identifier”
+** Hashing function shall be mgf1SHA-256Identifier
+** Signature algorithm: RSA-PS
 
 | 6.1.2
-| M*
-| Hashing function used: `SHA3-256`
+| M
+| Implementations shall support validating signatures with any of these suites.
 
 | 6.1.3
-| M*
-| Signature algorithm used: `EC-DSA`
+| M
+a| The key size shall be minimum:
 
-| 6.1.4
-| M*
-| Minimum 3072 bits key length for RSA keys
+1. ECDSA: 256 bits (NIST P-256)
+1. RSA: 3072 bits
 |===
+
+NOTE: These requirements only apply to the signature itself, not the signature of the signing certificate used.
 
 [INFO]
 ====
 Timeline for introduction of 6.1 requirements:
 
-* February 15th 2021: Release of requirements.
-* August 15th 2021: Mandatory to support in reception in addition to legacy algorithms.
-* September 15th 2021: Optional use in sending.
-* October 15th 2021: Mandatory use. No more use of legacy algorithms.
+* June 15th 2021: Release of requirements.
+* January 15th 2022: Mandatory to support validation (reception) in addition to legacy algorithms (requirement 6.1.2).
+* February 15th 2022: Optional use in sending.
+* March 15th 2022: Mandatory use of 6.1.1. No more use of legacy algorithms. From this date requirements 5.1.13 and 5.1.14 are deprecated.
+* August 1st 2022: Mandatory use of 6.1.3 for new certificates. Certificates issued before this date may be used until they expire.
 ====
 
 
@@ -640,30 +651,27 @@ Timeline for introduction of 6.1 requirements:
 | Requirement
 
 | 6.2.1
-| M*
-| Hashing: SHA-256
+| M
+| Key encryption with: “RSA-OAEP-256” - RSAES OAEP using SHA-256 and MGF1 with SHA-256.
 
 | 6.2.2
-| M*
-| Key encryption with: RSA-OAEP
+| M
+| Content encryption: AES with 256 bit keys Mode of operation: GCM
 
 | 6.2.3
-| M*
-| Encryption: AES with 256bit keys +
-Mode of operation: GCM
-| 6.2.4
-| M*
-| Minimum 3072 bits key length for RSA keys
+| M
+| Minimum key size shall be 3072 bits for RSA keys
 |===
 
 [INFO]
 ====
 Timeline for introduction of 6.2 requirements:
 
-* February 15th 2021: Release of requirements.
-* August 15th 2021: Mandatory to support in reception in addition to legacy algorithms.
-* September 15th 2021: Optional use in sending.
-* October 15th 2021: Mandatory use. No more use of legacy algorithms.
+* June 15th 2021: Release of requirements.
+* January 15th 2022: Mandatory to support reception in addition to legacy algorithms.
+* February 15th 2022: Optional use in sending.
+* March 15th 2022: Mandatory use of 6.2.1 and 6.2.2. No more use of legacy algorithms.
+* August 1st 2022: Mandatory use of 6.2.3 for new certificates. Certificates issued before this date may be used until they expire.
 ====
 
 
