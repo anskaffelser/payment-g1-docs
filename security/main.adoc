@@ -1,6 +1,6 @@
 = Security requirements for secure file transactions
 Bits AS
-0.93 SNAPSHOT
+0.94 SNAPSHOT
 :doctype: book
 :icons: font
 :toc: left
@@ -21,7 +21,7 @@ Both banks and ERP vendors, as well as their customers, have a need for one comm
 
 This document sets out the Bits’ security requirements all parties using any transport infrastructure will have to adhere to, in order to be allowed access to the network for transfer of payment information.
 
-Initially the infrastructure used is Enhanced PEPPOL. Therefore, Enhanced PEPPOL is referred to throughout.
+Initially the infrastructure used is Peppol. Therefore, Peppol is referred to throughout.
 
 This document will have to be revised annually or if there are major changes, such as the document being applied to a different transport infrastructure.
 
@@ -114,6 +114,17 @@ a|
 
 | 15.05.2021
 | A. Havsberg
+
+
+| 0.94
+a|
+* Replacing 5.6
+* Updated 2.5
+* Updated references (5.1.3, 5.1.17, 5.2.3)
+* Adding text on GCM usage in 6.2
+| 27.08.2021
+| E. K. Bergheim
+
 |===
 
 
@@ -154,7 +165,7 @@ a|
 | An approved provider of a PKI based trust services for certification and dissemination of public keys .
 
 | BCP
-| Business Certificate Publisher. Public key database for Enhanced PEPPOL (status per Q2 2017 is that registering app not available yet, will be hosted by DIFI for the time being)
+| Business Certificate Publisher. Public key database for interexchange of certificates.
 
 | Access Point
 | Node responsible for access to the transport infrastructure
@@ -164,9 +175,6 @@ a|
 
 | Corner 3 (C3)
 | PEPPOL receiving node
-
-| Enhanced Peppol
-| Enhanced PEPPOL eDelivery Network - Financial grade PEPPOL.
 
 | Approved CA
 | Trusted Certificate Authority which have been deemed to meet the criteria set out by Interoperable trust anchors - Requirements Bits
@@ -221,17 +229,20 @@ a|
 | Classification
 | Explanation
 
-| Mandatory (M)
+| Mandatory - M
 | This requirement is absolute
 
-| Recommended (R)
+| Recommended - R
 | This is recommended by Bits but may be flouted following a risk assessment and consideration of mitigation.
 
-| Optional (O)
+| Optional - O
 | This requirement is optional. Adoption is left to the discretion of the system owner
 
-| Conditional (C)
+| Conditional - C
 | This requirement is relevant on the condition that another factor is present. “if…., then…)
+
+| Deprecated - D
+| This requirement is deprevated
 |===
 
 
@@ -251,7 +262,7 @@ This document contains requirements for secure file-based transport of financial
 
 These requirements are limited to security requirements. Requirements concerning other technical aspects are covered elsewhere.
 
-All references to PEPPOL in this document refers to the Enhanced PEPPOL eDelivery Network.
+All references to Peppol in this document refers to the Peppol eDelivery Network.
 
 
 == Migrations
@@ -333,7 +344,7 @@ The chapters below set out security requirements for participants
 
 | 5.1.3
 | M
-| All time and dates must be formatted according to ISO 8601 including date and time to nearest millisecond in GMT+1. (see appendix 1 for example)
+| All time and dates must be formatted according to ISO 8601 including date and time to nearest millisecond in GMT+1.
 
 | 5.1.4
 | M
@@ -389,7 +400,7 @@ The chapters below set out security requirements for participants
 
 | 5.1.17
 | M
-| Encryption process must adhere to the description in Annex 1 of this document.
+| Encryption process must adhere to the description in Appendix 1 of this document.
 |===
 
 ===  Requirements to Corner 1
@@ -410,7 +421,7 @@ The chapters below set out security requirements for participants
 
 | 5.2.3
 | M
-| C1 must sign inner and outer ASIC container using the same (sign 1) Private Key based on business certificate issued by a qualified trust anchor.
+| C1 must sign inner and outer ASIC container using the same Private Key (see 5.2.1) based on business certificate issued by a qualified trust anchor.
 
 | 5.2.4
 | M
@@ -529,16 +540,7 @@ BCP is a shared certificate server for storage of public certificates. It will s
 
 === Requirements to Corner 2 and 3
 
-[cols="1,1,6", options="header"]
-|===
-| #
-| Status
-| Requirement
-
-| 5.6.1
-| R
-| Should achieve minimum grade A on Qualys SSL labs
-|===
+Service providers providing Corner 2 or Corner 3 services must implement security according to Peppol Policy for Transport Security. 
 
 
 === Requirements for transport from corner 3 to corner 4
@@ -669,6 +671,13 @@ Timeline for introduction of 6.1 requirements:
 | M
 | Minimum key size shall be 3072 bits for RSA keys
 |===
+
+
+[INFO]
+====
+The IV (Initialisation Vector) must be managed within the security perimeter of the authenticated encryption process. For example, it is crucial to ensure that no adversary can cause the same IV to be reused to protect different (plaintext, associated data) pairs under the same key
+====
+
 
 [INFO]
 ====
