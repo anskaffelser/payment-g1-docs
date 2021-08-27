@@ -1,6 +1,6 @@
 = Security requirements for secure file transactions
 Bits AS
-0.94 SNAPSHOT
+0.94
 :doctype: book
 :icons: font
 :toc: left
@@ -673,10 +673,7 @@ Timeline for introduction of 6.1 requirements:
 |===
 
 
-[INFO]
-====
-The IV (Initialisation Vector) must be managed within the security perimeter of the authenticated encryption process. For example, it is crucial to ensure that no adversary can cause the same IV to be reused to protect different (plaintext, associated data) pairs under the same key
-====
+NOTE: The IV (Initialisation Vector) must be managed within the security perimeter of the authenticated encryption process. For example, it is crucial to ensure that no adversary can cause the same IV to be reused to protect different (plaintext, associated data) pairs under the same key
 
 
 [INFO]
