@@ -38,7 +38,6 @@ Since OpenPEPPOL do not have an agreement with end-users, this document also set
 .. the PEPPOL Business Document has been validated without errors before sending the business document/payload into the infrastructure;
 .. the Public key service is used to store and extract certificate used for encrypting the PEPPOL Business Document/payload;
 .. the ASiC-E container is used for packaging the PEPPOL Business Document;
-.. the SBDH is used and properly reflects the metadata of the PEPPOL Business Document(s) carried in the ASIC-E container.
 .. acknowledgements and receipts are generated and sent to confirm receipt of PEPPOL Business Documents/payloads.
 
 = Services provided by PEPPOL AP providers
